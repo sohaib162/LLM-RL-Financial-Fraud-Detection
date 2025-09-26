@@ -1,0 +1,23 @@
+# RL
+stable-baselines3==2.3.2
+gymnasium==0.29.1
+
+# Core scientific
+numpy>=1.26
+pandas>=2.2
+scikit-learn>=1.4
+matplotlib>=3.8
+seaborn>=0.13
+
+# NLP / embeddings
+transformers>=4.42
+sentence-transformers>=3.0
+datasets>=2.20
+torch>=2.3
+
+# Data helpers
+kagglehub>=0.2.5
+
+# Optional
+ctgan>=0.7
+plotly>=5.22
