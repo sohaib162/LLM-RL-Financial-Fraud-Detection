@@ -19,7 +19,6 @@ The goal is to make experiments **reproducible** on a standard Ubuntu laptop (CP
 - Clear **repro steps** and pinned **requirements**.
 
 ## Project Structure
-Recommended layout (rename folders to avoid spaces and typos):
 ```
 .
 ├─ data/                          # Auto-downloaded or manual CSVs (git-ignored)
@@ -32,9 +31,6 @@ Recommended layout (rename folders to avoid spaces and typos):
 │  │  └─ distilbert_baseline.ipynb
 │  └─ fillings/
 │     └─ RL_FILLINGS.ipynb        # expects Final_Dataset.csv
-├─ envs/                          # (optional) custom gymnasium envs packaged as .py
-├─ artifacts/                     # saved models, plots, metrics
-├─ docs/                          # report, figures
 ├─ requirements.txt
 └─ README.md
 ```
