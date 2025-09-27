@@ -141,8 +141,24 @@ The RL notebooks define a `FraudDetectionEnv(gym.Env)` variant operating on **em
 - Fix random seeds where possible (NumPy, PyTorch, SB3).  
 - Prefer **VecNormalize** and document `n_envs` if using parallel envs.
 
-## Results (to be filled)
-Add your tables/figures comparing RL agents vs supervised baselines on PaySim and CreditCard datasets. Include training curves, confusion matrices, and cost‑sensitive metrics if relevant.
+## Results
+**Validation/Test Metrics**  
+![Validation/Test Metrics Table](docs/figures/metrics-table.png)
+
+**DQN – Confusion Matrix (Test)**  
+![Confusion Matrix – DQN](docs/figures/confusion-matrix-dqn.png)
+
+**A2C – Policy Loss During Training**  
+![Policy Loss – A2C](docs/figures/policy-loss-a2c.png)
+
+
+**A2C – Confusion Matrix (Test)**  
+![Confusion Matrix – A2C](docs/figures/confusion-matrix-a2c.png)
+
+> **Notes**
+> - For imbalanced datasets, report **PR-AUC**, **Recall@k**, **F1 (macro)**, and **cost-weighted** metrics in addition to accuracy.
+> - Consider threshold tuning and business costs for false positives/negatives.
+> - Log seeds and data splits for reproducibility.
 
 ## Roadmap
 - Package `FraudDetectionEnv` as a pip‑installable module.
