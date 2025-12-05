@@ -1,0 +1,58 @@
+# Dataset files
+ablation_study/creditcard.csv
+ablation_study/paysim.csv
+*.csv
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# MacOS
+.DS_Store
+__MACOSX/
+
+# Model files (large binary files)
+*.zip
+*.pt
+*.pth
+*.h5
+*.pkl
+*.pickle
+
+# Checkpoints and logs
+results/checkpoints/
+results/tensorboard/
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+
+# Environment variables
+.env
+.env.local

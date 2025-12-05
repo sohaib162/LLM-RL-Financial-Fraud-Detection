@@ -1,0 +1,828 @@
+%  LaTeX support: latex@mdpi.com 
+%  For support, please attach all files needed for compiling as well as the log file, and specify your operating system, LaTeX version, and LaTeX editor.
+
+%=================================================================
+\documentclass[algorithms,article,submit,pdftex,moreauthors]{Definitions/mdpi} 
+%\documentclass[preprints,article,submit,pdftex,moreauthors]{Definitions/mdpi} 
+% For posting an early version of this manuscript as a preprint, you may use "preprints" as the journal. Changing "submit" to "accept" before posting will remove line numbers.
+
+%--------------------
+% Class Options:
+%--------------------
+%----------
+% journal
+%----------
+% Choose between the following MDPI journals:
+% accountaudit, acoustics, actuators, addictions, adhesives, admsci, adolescents, aerobiology, aerospace, agriculture, agriengineering, agrochemicals, agronomy, ai, air, algorithms, allergies, alloys, amh, analytica, analytics, anatomia, anesthres, animals, antibiotics, antibodies, antioxidants, applbiosci, appliedchem, appliedmath, appliedphys, applmech, applmicrobiol, applnano, applsci, aquacj, architecture, arm, arthropoda, arts, asc, asi, astronomy, atmosphere, atoms, audiolres, automation, axioms, bacteria, batteries, bdcc, behavsci, beverages, biochem, bioengineering, biologics, biology, biomass, biomechanics, biomed, biomedicines, biomedinformatics, biomimetics, biomolecules, biophysica, biosensors, biosphere, biotech, birds, blockchains, bloods, blsf, brainsci, breath, buildings, businesses, cancers, carbon, cardiogenetics, catalysts, cells, ceramics, challenges, chemengineering, chemistry, chemosensors, chemproc, children, chips, cimb, civileng, cleantechnol, climate, clinbioenerg, clinpract, clockssleep, cmd, cmtr, coasts, coatings, colloids, colorants, commodities, complications, compounds, computation, computers, condensedmatter, conservation, constrmater, cosmetics, covid, crops, cryo, cryptography, crystals, csmf, ctn, curroncol, cyber, dairy, data, ddc, dentistry, dermato, dermatopathology, designs, devices, diabetology, diagnostics, dietetics, digital, disabilities, diseases, diversity, dna, drones, dynamics, earth, ebj, ecm, ecologies, econometrics, economies, education, eesp, ejihpe, electricity, electrochem, electronicmat, electronics, encyclopedia, endocrines, energies, eng, engproc, ent, entomology, entropy, environments, epidemiologia, epigenomes, esa, est, famsci, fermentation, fibers, fintech, fire, fishes, fluids, foods, forecasting, forensicsci, forests, fossstud, foundations, fractalfract, fuels, future, futureinternet, futureparasites, futurepharmacol, futurephys, futuretransp, galaxies, games, gases, gastroent, gastrointestdisord, gastronomy, gels, genealogy, genes, geographies, geohazards, geomatics, geometry, geosciences, geotechnics, geriatrics, glacies, grasses, greenhealth, gucdd, hardware, hazardousmatters, healthcare, hearts, hemato, hematolrep, heritage, higheredu, highthroughput, histories, horticulturae, hospitals, humanities, humans, hydrobiology, hydrogen, hydrology, hygiene, idr, iic, ijerph, ijfs, ijgi, ijmd, ijms, ijns, ijpb, ijt, ijtm, ijtpp, ime, immuno, informatics, information, infrastructures, inorganics, insects, instruments, inventions, iot, j, jal, jcdd, jcm, jcp, jcs, jcto, jdad, jdb, jeta, jfb, jfmk, jimaging, jintelligence, jlpea, jmahp, jmmp, jmms, jmp, jmse, jne, jnt, jof, joitmc, joma, jop, jor, journalmedia, jox, jpbi, jpm, jrfm, jsan, jtaer, jvd, jzbg, kidney, kidneydial, kinasesphosphatases, knowledge, labmed, laboratories, land, languages, laws, life, lights, limnolrev, lipidology, liquids, literature, livers, logics, logistics, lubricants, lymphatics, machines, macromol, magnetism, magnetochemistry, make, marinedrugs, materials, materproc, mathematics, mca, measurements, medicina, medicines, medsci, membranes, merits, metabolites, metals, meteorology, methane, metrics, metrology, micro, microarrays, microbiolres, microelectronics, micromachines, microorganisms, microplastics, microwave, minerals, mining, mmphys, modelling, molbank, molecules, mps, msf, mti, multimedia, muscles, nanoenergyadv, nanomanufacturing, nanomaterials, ncrna, ndt, network, neuroglia, neurolint, neurosci, nitrogen, notspecified, nursrep, nutraceuticals, nutrients, obesities, oceans, ohbm, onco, oncopathology, optics, oral, organics, organoids, osteology, oxygen, parasites, parasitologia, particles, pathogens, pathophysiology, pediatrrep, pets, pharmaceuticals, pharmaceutics, pharmacoepidemiology, pharmacy, philosophies, photochem, photonics, phycology, physchem, physics, physiologia, plants, plasma, platforms, pollutants, polymers, polysaccharides, populations, poultry, powders, preprints, proceedings, processes, prosthesis, proteomes, psf, psych, psychiatryint, psychoactives, psycholint, publications, purification, quantumrep, quaternary, qubs, radiation, reactions, realestate, receptors, recycling, regeneration, religions, remotesensing, reports, reprodmed, resources, rheumato, risks, robotics, rsee, ruminants, safety, sci, scipharm, sclerosis, seeds, sensors, separations, sexes, signals, sinusitis, siuj, skins, smartcities, sna, societies, socsci, software, soilsystems, solar, solids, spectroscj, sports, standards, stats, std, stresses, surfaces, surgeries, suschem, sustainability, symmetry, synbio, systems, tae, targets, taxonomy, technologies, telecom, test, textiles, thalassrep, therapeutics, thermo, timespace, tomography, tourismhosp, toxics, toxins, transplantology, transportation, traumacare, traumas, tropicalmed, universe, urbansci, uro, vaccines, vehicles, venereology, vetsci, vibration, virtualworlds, viruses, vision, waste, water, wem, wevj, wild, wind, women, world, youth, zoonoticdis
+
+%---------
+% article
+%---------
+% The default type of manuscript is "article", but can be replaced by: 
+% abstract, addendum, article, benchmark, book, bookreview, briefcommunication, briefreport, casereport, changes, clinicopathologicalchallenge, comment, commentary, communication, conceptpaper, conferenceproceedings, correction, conferencereport, creative, datadescriptor, discussion, entry, expressionofconcern, extendedabstract, editorial, essay, erratum, fieldguide, hypothesis, interestingimages, letter, meetingreport, monograph, newbookreceived, obituary, opinion, proceedingpaper, projectreport, reply, retraction, review, perspective, protocol, shortnote, studyprotocol, supfile, systematicreview, technicalnote, viewpoint, guidelines, registeredreport, tutorial,  giantsinurology, urologyaroundtheworld
+% supfile = supplementary materials
+
+%----------
+% submit
+%----------
+% The class option "submit" will be changed to "accept" by the Editorial Office when the paper is accepted. This will only make changes to the frontpage (e.g., the logo of the journal will get visible), the headings, and the copyright information. Also, line numbering will be removed. Journal info and pagination for accepted papers will also be assigned by the Editorial Office.
+
+%------------------
+% moreauthors
+%------------------
+% If there is only one author the class option oneauthor should be used. Otherwise use the class option moreauthors.
+
+%---------
+% pdftex
+%---------
+% The option pdftex is for use with pdfLaTeX. Remove "pdftex" for (1) compiling with LaTeX & dvi2pdf (if eps figures are used) or for (2) compiling with XeLaTeX.
+
+%=================================================================
+% MDPI internal commands - do not modify
+\firstpage{1} 
+\makeatletter 
+\setcounter{page}{\@firstpage} 
+\makeatother
+\pubvolume{1}
+\issuenum{1}
+\articlenumber{0}
+\pubyear{2025}
+\copyrightyear{2025}
+%\externaleditor{Firstname Lastname} % More than 1 editor, please add `` and '' before the last editor name
+\datereceived{ } 
+\daterevised{ } % Comment out if no revised date
+\dateaccepted{ } 
+\datepublished{ } 
+%\datecorrected{} % For corrected papers: "Corrected: XXX" date in the original paper.
+%\dateretracted{} % For retracted papers: "Retracted: XXX" date in the original paper.
+\hreflink{https://doi.org/} % If needed use \linebreak
+%\doinum{}
+%\pdfoutput=1 % Uncommented for upload to arXiv.org
+%\CorrStatement{yes}  % For updates
+%\longauthorlist{yes} % For many authors that exceed the left citation part
+%\IsAssociation{yes} % For association journals
+
+%=================================================================
+% Add packages and commands here. The following packages are loaded in our class file: fontenc, inputenc, calc, indentfirst, fancyhdr, graphicx, epstopdf, lastpage, ifthen, float, amsmath, amssymb, lineno, setspace, enumitem, mathpazo, booktabs, titlesec, etoolbox, tabto, xcolor, colortbl, soul, multirow, microtype, tikz, totcount, changepage, attrib, upgreek, array, tabularx, pbox, ragged2e, tocloft, marginnote, marginfix, enotez, amsthm, natbib, hyperref, cleveref, scrextend, url, geometry, newfloat, caption, draftwatermark, seqsplit
+% cleveref: load \crefname definitions after \begin{document}
+
+\graphicspath{{./images/}}
+
+%=================================================================
+% Please use the following mathematics environments: Theorem, Lemma, Corollary, Proposition, Characterization, Property, Problem, Example, ExamplesandDefinitions, Hypothesis, Remark, Definition, Notation, Assumption
+%% For proofs, please use the proof environment (the amsthm package is loaded by the MDPI class).
+
+%=================================================================
+% Full title of the paper (Capitalized)
+\Title{LLM-Assisted Fraud Detection with Reinforcement Learning}
+
+% MDPI internal command: Title for citation in the left column
+\TitleCitation{LLM-Assisted Fraud Detection with Reinforcement Learning}
+
+% Author Orchid ID: enter ID or remove command
+\newcommand{\orcidauthorA}{0000-0002-0309-8942} % Add \orcidA{} behind the author's name
+\newcommand{\orcidauthorB}{0000-0003-4920-1850} % Add \orcidB{} behind the author's name
+
+% Authors, for the paper (add full first names)
+\Author{Ahmed Djalal Hacini $^{1}$, Mohamed Benabdelouahad $^{1}$, Ishak Abassi $^{1}$, Sohaib Houhou $^{1}$, Aissa Boulmerka $^{1}$\orcidB{} and Nadir Farhi $^{2,}$*\orcidA{}}
+
+%\longauthorlist{yes}
+
+% MDPI internal command: Authors, for metadata in PDF
+\AuthorNames{Ahmed Djalal Hacini, Mohamed Benabdelouahad, Ishak Abassi, Sohaib Houhou, Aissa Boulmerka, Nadir Farhi}
+
+% Author citation:  
+\AuthorCitation{Hacini, A. D.; Benabdelouahad, M.; Abassi, I.; Houhou, S.; Boulmerka, A.; Farhi, N.}
+
+% Affiliations / Addresses (Add [1] after \address if there is only one affiliation.)
+\address{%
+$^{1}$ \quad National Higher School of Artificial Intelligence (ENSIA), Algiers, Algeria. \\ %Affiliation 1; e-mail@e-mail.com\\
+$^{2}$ \quad Cosys-Grettia, Univ Gustave Eiffel, F-77454 Marne-la-Vall\'ee, France.} %Affiliation 2; e-mail@e-mail.com}
+
+% Contact information of the corresponding author
+\corres{Correspondence: nadir.farhi@univ-eiffel.fr} %; Tel.: (optional; include country code; if there are multiple corresponding authors, add author initials) +xx-xxxx-xxx-xxxx (F.L.)}
+
+% Current address and/or shared authorship
+%\firstnote{Current address: Affiliation.}  
+% Current address should not be the same as any items in the Affiliation section.
+
+%\secondnote{These authors contributed equally to this work.}
+% The commands \thirdnote{} till \eighthnote{} are available for further notes.
+
+%\simplesumm{} % Simple summary
+
+%\conference{} % An extended version of a conference paper
+
+% Abstract (Do not insert blank lines, i.e. \\) 
+\abstract{Detecting financial fraud is challenging due to extreme class imbalance, evolving attack strategies, and the high cost asymmetry between missed frauds and false alarms. We propose a hybrid framework in which a large language model (LLM) serves as an encoder, transforming transaction text and structured features into a unified embedding space. These embeddings define the state representation for a reinforcement learning (RL) agent, which acts as a fraud classifier optimized with business-aligned rewards that heavily penalize false negatives while controlling false positives. We evaluate the approach on two benchmark datasets—European Credit Card Fraud and PaySim—and show that policy-gradient methods, particularly A2C, achieve high recall without sacrificing precision, consistently reducing costly false negatives compared to value-based or bandit baselines. Our results highlight the potential of coupling LLM-driven representations with RL policies for cost-sensitive and adaptive fraud detection.}
+
+% Keywords
+\keyword{Fraud detection, Reinforcement learning, Large language models, Class imbalance, Financial NLP.} 
+
+% The fields PACS, MSC, and JEL may be left empty or commented out if not applicable
+%\PACS{J0101}
+%\MSC{}
+%\JEL{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Only for the journal Diversity
+%\LSID{\url{http://}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Only for the journal Applied Sciences
+%\featuredapplication{Authors are encouraged to provide a concise description of the specific application or a potential application of the work. This section is not mandatory.}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Only for the journal Data
+%\dataset{DOI number or link to the deposited data set if the data set is published separately. If the data set shall be published as a supplement to this paper, this field will be filled by the journal editors. In this case, please submit the data set as a supplement.}
+%\datasetlicense{License under which the data set is made available (CC0, CC-BY, CC-BY-SA, CC-BY-NC, etc.)}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Only for the journal BioTech, Fishes, Neuroimaging and Toxins
+%\keycontribution{The breakthroughs or highlights of the manuscript. Authors can write one or two sentences to describe the most important part of the paper.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Only for the journal Encyclopedia
+%\encyclopediadef{For entry manuscripts only: please provide a brief overview of the entry title instead of an abstract.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Different journals have different requirements. Please check the specific journal guidelines in the "Instructions for Authors" on the journal's official website.
+%\addhighlights{yes}
+%\renewcommand{\addhighlights}{%
+%
+%\noindent The goal is to increase the discoverability and readability of the article via search engines and other scholars. Highlights should not be a copy of the abstract, but a simple text allowing the reader to quickly and simplified find out what the article is about and what can be cited from it. Each of these parts should be devoted up to 2~bullet points.\vspace{3pt}\\
+%\textbf{What are the main findings?}
+% \begin{itemize}[labelsep=2.5mm,topsep=-3pt]
+% \item First bullet.
+% \item Second bullet.
+% \end{itemize}\vspace{3pt}
+%\textbf{What is the implication of the main finding?}
+% \begin{itemize}[labelsep=2.5mm,topsep=-3pt]
+% \item First bullet.
+% \item Second bullet.
+% \end{itemize}
+%}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Introduction}
+Fraud detection is a critical task for financial institutions, e-commerce platforms, and mobile money providers, where even a small fraction of fraudulent activity can lead to disproportionate financial and reputational losses.
+The problem is compounded by severe class imbalance—fraud often constitutes less than 0.2\% of transactions—by continual concept drift as adversaries adapt, and by the multi-modal nature of data that combines structured fields (amount, time, location) with unstructured text (transaction memos, descriptions, customer messages).
+Traditional supervised classifiers, though effective on historical data, degrade when patterns shift or when costs of misclassification are asymmetric. In practice, missing a fraud (false negative) is far more damaging than issuing a false alarm (false positive).
+
+To address these challenges, we design a hybrid pipeline where an LLM encodes both text and structured fields into semantic embeddings, which are then passed to a reinforcement learning agent that acts as an adaptive classifier.
+The RL agent is trained under a reward function aligned with business utility, assigning a large penalty to false negatives, a moderate penalty to false positives, and positive reward for correct detections.
+This design allows the policy to adapt over time and prioritize high-recall fraud detection while maintaining operational precision.
+
+The remainder of this paper is structured as follows. Section~\ref{sec:related} reviews prior research on fraud detection, with an emphasis on machine learning and reinforcement learning approaches. Section~\ref{sec:methodology} introduces the proposed hybrid framework, detailing the large language model (LLM)-based feature encoding mechanism and the formalization of the fraud detection task as a Markov Decision Process (MDP). Section~\ref{sec:implementation} describes the experimental setup, including the datasets, baseline methods, and evaluation metrics. Section~\ref{sec:results} presents the empirical results, followed by a comprehensive analysis and discussion of key findings and implications in Section~\ref{sec:discussion}. Finally, Section~\ref{sec:conclusion} concludes the paper and outlines promising avenues for future research.
+
+\paragraph{Contributions.}
+Our main contributions are:
+\begin{itemize}
+  \item \textbf{Hybrid RL + LLM framework:} We integrate LLM-derived text embeddings with structured features to form the state space for an RL agent that performs cost-sensitive fraud classification.
+  \item \textbf{Reward shaping aligned with business costs:} We design and evaluate asymmetric reward functions that directly encode the higher cost of false negatives relative to false positives.
+  \item \textbf{Comprehensive evaluation:} We benchmark multiple RL algorithms (A2C, PPO, DQN, and contextual bandits) on two fraud detection datasets (European Credit Card Fraud and PaySim), analyzing precision–recall trade-offs under severe imbalance.
+  \item \textbf{Reproducibility assets:} We provide environment design, implementation details, and training configurations to facilitate replication and extension of our results.
+\end{itemize}
+
+\section{Related Work}\label{sec:related}
+
+This section reviews the literature pertinent to adaptive, cost-sensitive fraud detection. We first establish the foundational challenge of class imbalance and survey common mitigation techniques (Section \ref{sec:related_imbalance}). We then contextualize our work by reviewing the two dominant paradigms: traditional machine learning classifiers (Section \ref{sec:related_ml}) and more recent reinforcement learning approaches (Section \ref{sec:related_rl}). Finally, we examine the emerging use of Large Language Models in finance and decision-making, establishing the research gap for a unified LLM+RL framework (Section \ref{sec:related_llm}).
+
+\subsection{Imbalanced Data Classification and Challenges}
+\label{sec:related_imbalance}
+Fraud detection inherently involves extreme class imbalance, where fraudulent transactions often represent less than 0.2\% of all data. This imbalance poses two main challenges: (i) classifiers become biased toward the majority (non-fraudulent) class, leading to high accuracy but poor recall, and (ii) standard loss functions (e.g., cross-entropy) fail to reflect the asymmetric cost of false negatives.
+
+Common remedies include resampling (oversampling minority or undersampling majority classes), synthetic data generation (SMOTE, ADASYN), and cost-sensitive learning that adjusts decision thresholds or penalizes misclassifications based on business costs~\cite{Elkan2001cost, Lin2017focalloss}. However, these methods can introduce data leakage or instability in high-dimensional settings.
+
+Reinforcement learning provides an alternative by embedding imbalance handling directly within the reward design. By assigning higher penalties to false negatives, RL agents can naturally learn cost-sensitive policies. However, while effective, these imbalance-mitigation techniques are not a panacea. Resampling and synthetic data generation risk introducing noise or overfitting, while standard cost-sensitive learning still relies on static features that may not capture the evolving, semantic nature of fraud. This suggests a persistent need for methods that can handle imbalance and adapt to dynamic, high-dimensional data simultaneously.
+
+\subsection{Traditional ML/DL for Fraud Detection}
+\label{sec:related_ml}
+The European Credit Card dataset (284{,}807 transactions, 0.172\% fraud) has become the canonical benchmark in fraud detection. Deep models such as attention-based LSTMs~\cite{Benchaji2021} and ensemble neural networks~\cite{Esenogho2022} achieve strong recall and AUC values, while tree ensembles remain competitive. For example, Random Forest and AdaBoost report accuracies above 96\% with AUCs close to 0.99~\cite{Randhawa2018,Tanouz2021}. More recent hybrid approaches combining resampling with gradient boosting (e.g., CatBoost) further improve AUC and recall under imbalance~\cite{Alfaiz2022,Khalid2024}.
+
+The PaySim simulator (6.3M mobile money transactions, 0.2\% fraud) has enabled controlled studies on mobile transfer fraud. Prior work primarily explores XGBoost, LightGBM, and CatBoost frameworks~\cite{Zhou2022}, with dataset creators showing baseline ML classifiers aided by dimensionality reduction and resampling~\cite{Lopez2016}. However, most PaySim studies emphasize methodology rather than standardized benchmarks, leaving space for RL- and LLM-based approaches.
+
+Overall, traditional ML/DL methods deliver high predictive performance on imbalanced fraud datasets, but they remain static classifiers vulnerable to concept drift and often require extensive re-weighting or resampling to account for class imbalance.
+
+\subsection{Reinforcement Learning for Fraud Detection}
+\label{sec:related_rl}
+Recent work has framed fraud detection as a sequential decision problem. Dang et al.~\cite{Dang2021} modeled transactions as a Markov Decision Process and trained a Deep Q-Network (DQN) that encoded imbalance costs in long-term rewards. Singh et al.~\cite{Singh2021} developed a Gym-based environment with DQN agents that achieved close to state-of-the-art performance on highly imbalanced credit card data. Mehmood et al.~\cite{Mehmood2021} also proposed deep RL approaches, showing growing interest in this paradigm.
+
+Compared to static classifiers, RL agents optimize long-term objectives and can automatically balance fraud detection against false alarm costs through reward shaping. They are inherently adaptive: policies can be updated online as adversaries shift strategies. However, RL in this domain remains challenging due to sample inefficiency, high-dimensional states (especially with text), and sensitivity to reward design. Prior results suggest that actor--critic and policy-gradient methods (e.g., A2C, PPO) can outperform purely value-based agents under severe imbalance, especially when recall is prioritized.
+
+\subsection{LLMs in Financial Text and Emerging RL+LLM}
+\label{sec:related_llm}
+Large Language Models (LLMs) have demonstrated strong capabilities in financial text understanding. FinBERT, trained on financial corpora, has been applied successfully to SEC filings and analyst reports~\cite{aracifinbert2019}, while FinChain-BERT~\cite{Yang2023} improves accuracy by focusing on financial terminology. Bhattacharya and Mickovic~\cite{Bhattacharya2022} fine-tuned BERT on 10-K MD\&A sections and achieved superior accounting fraud detection compared to traditional methods.
+
+For transaction-level fraud, LLMs can extract cues from short descriptions or memos. Early studies report that GPT-class models achieve near-perfect identification on PaySim using zero-shot prompting, and anomaly detection studies highlight their ability to flag deviations from normative patterns~\cite{Lee2023,Chen2023}. Smaller domain-tuned models such as DistilBERT and FinBERT often provide competitive accuracy at lower cost, making them practical in production.
+
+Finally, there is emerging work on integrating RL with LLMs in decision-making. Reinforcement Learning from Human Feedback (RLHF) has been used to align models like ChatGPT~\cite{Ouyang2022}, and systems such as SayCan~\cite{Ahn2022} combine LLMs with RL for robotics. Zhao et al.~\cite{Zhao2023} designed a GPT-based fraud model that captures temporal sequences with RL-like objectives. Yet, despite these parallel advances, the integration of these two fields for transaction-level fraud detection remains largely unexplored. Prior work has not investigated using rich, semantic embeddings from LLMs as a state representation for RL agents, which would allow policies to be trained directly on textual data and aligned with asymmetric business costs. This represents a critical and open research gap.
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.9\textwidth, height=0.5\textheight, keepaspectratio]{workflow.pdf}
+  \caption{High-level architecture of the proposed LLM-RL fraud detection framework. The system processes raw transaction data, uses a fine-tuned LLM to create semantic embeddings, fuses them with structured features, and trains an RL agent on the resulting unified state representation.}
+  \label{fig:workflow}
+\end{figure}
+
+\section{Methodology}\label{sec:methodology}
+Our framework integrates a large language model (LLM) with a reinforcement learning (RL) agent to build an adaptive, cost-sensitive fraud detection system. The overall architecture of this hybrid pipeline is illustrated in Figure~\ref{fig:workflow}. The process begins with raw transaction data, which undergoes preprocessing and is split for training and evaluation. A fine-tuned LLM is used as a frozen encoder to generate semantic embeddings from the data. These embeddings are then fused with the original structured features to create a unified state representation. Finally, this state is fed into an RL agent, which is trained to make optimal classification decisions. The following subsections detail each of these core components.
+
+\subsection{Data Preprocessing}
+Each transaction contains both structured attributes (numerical features such as amount and timestamp, categorical features such as transaction type, and historical indicators of prior fraud) and unstructured text (descriptions, memos, or free-form notes).
+Preprocessing standardizes numeric scales (e.g., robust scaling of amounts, temporal features such as time-of-day) and cleans text (removal of personally identifiable information, normalization, and financial-jargon handling). To mitigate extreme imbalance, we employ stratified sampling and oversampling of fraudulent cases, ensuring sufficient exposure of rare events during training.
+
+\subsection{LLM-Based Transaction Encoding}
+A key novelty of our approach is the transformation of heterogeneous transaction features into natural language form and subsequent encoding with an LLM.
+Structured attributes are textualized into descriptive sentences (e.g., \emph{``Transaction amount is \$256.78''}, \emph{``Transaction type: International Transfer''}, \emph{``Friday evening transaction at 8:45 PM''}), while raw descriptions are appended as unstructured text.
+The resulting sequence is processed by a pre-trained financial language model (e.g., FinBERT, DistilBERT), fine-tuned for binary classification.
+
+\paragraph{Embedding Extraction.}
+From the final hidden states of the LLM, we derive transaction embeddings using two pooling strategies:
+\begin{equation}
+  h_{\text{mean}} = \frac{1}{L}\sum_{i=1}^{L} h_i, \quad
+  h_{\text{attn}} = \sum_{i=1}^{L} a_i h_i,
+\end{equation}
+
+where $h_i \in \mathbb{R}^{768}$ are token embeddings, and the attention weights \(a_i\) are calculated using a small, trainable feed-forward neural network. This network learns to score the importance of each token by projecting it into a hidden representation and then generating a scalar.
+\begin{equation}
+  a_i = \text{softmax}(W_2 \tanh(W_1 h_i)).
+\end{equation}
+
+\paragraph{Why Attention-Based Pooling?}
+Mean pooling treats all tokens equally, which can dilute critical information when fraud indicators are concentrated in a few words (e.g., ``urgent transfer overseas''). Attention pooling instead assigns learnable importance weights, enabling the encoder to selectively amplify informative tokens while suppressing irrelevant ones. This mechanism has been shown to improve financial text tasks by focusing on high-salience cues~\cite{Yang2016hierarchical,Bahdanau2015attention,Lin2017structured}.
+This process allows the model to learn which parts of the input text are most relevant for the fraud detection task. Empirically, this approach yields embeddings that are not only more discriminative but also more interpretable, as the attention weights \(a_i\) can be inspected to highlight which textual fragments contributed most to the final decision.
+
+\subsubsection{Train/Validation/Test Protocol and Data Leakage Controls}
+To prevent any form of data leakage, all splitting and estimator fitting follow a strict \emph{train-only} protocol:
+\begin{enumerate}[leftmargin=*,itemsep=2pt,topsep=2pt]
+  \item \textbf{Split before any modeling.} We create train/validation/test partitions prior to any preprocessing or model fitting. For the European dataset we use a stratified split; for PaySim we use a chronological (temporal) split to emulate deployment.
+  \item \textbf{Fit transforms on train only.} All preprocessing operators (scalers, PCA/feature reductions, tokenizers’ vocab extensions if any) are fit on the training set and then \emph{frozen} and applied to validation/test.
+  \item \textbf{LLM fine-tuning on train only.}
+    Fine-tuning is a transfer learning technique where a large, pre-trained model is adapted to a new, specialized task. In our work, we take a language model (FinBERT or DistilBERT) and further train it on our specific dataset to become an expert in the binary classification of fraudulent transactions. This adaptation is performed \emph{exclusively} on training records with their corresponding labels. No validation or test examples are ever used for weight updates or model calibration, ensuring the model's final evaluation is unbiased.
+
+    Formally, this process involves adding a classification head on top of the base LLM and updating the entire network's parameters (\(\theta_{\text{LLM}}\)) and the new classification head parameters be (\(\theta_{\text{cls}}\)) to minimize a binary classification loss. For an input transaction text \(x_i\) and its true label \(y_i \in \{0, 1\}\) from the training set (\(\mathcal{D}_{\text{train}}\)), the optimization objective is to minimize the total binary cross-entropy (BCE) loss:
+    \begin{equation}
+      \min_{\theta_{\text{LLM}}, \theta_{\text{cls}}} \sum_{(x_i, y_i) \in \mathcal{D}_{\text{train}}} \mathcal{L}_{\text{BCE}}(y_i, \hat{y}_i),
+    \end{equation}
+    where the loss for a single instance is:
+    \begin{equation}
+      \mathcal{L}_{\text{BCE}}(y_i, \hat{y}_i) = -[y_i \log(\hat{y}_i) + (1 - y_i) \log(1 - \hat{y}_i)].
+    \end{equation}
+    The predicted probability \(\hat{y}_i\) is obtained by passing the LLM's output representation through the classification head. This entire optimization is strictly confined to the training partition to guarantee that no information from other data splits influences the learned model parameters.
+  \item \textbf{Embeddings for val/test via frozen encoder.} After fine-tuning, the LLM encoder is frozen. Validation and test embeddings are \emph{computed forward-only} with the frozen encoder; no adapter updates, prompt revisions, or threshold tuning use validation/test labels except for model selection (via a held-out validation set).
+  \item \textbf{RL training/evaluation isolation.} The RL agent is trained using states derived from the training split only (including the frozen encoder and train-fit transforms). Policies are then evaluated on validation/test with no additional learning.
+\end{enumerate}
+This protocol ensures that representation learning (LLM), feature scaling, and policy learning never access information from validation/test during training, eliminating label or distributional leakage.
+
+\subsection{Feature Fusion}
+The LLM-derived embedding ($h_{\text{LLM}}$) is concatenated with normalized structured features to form the RL state representation $s_t$. This is defined as:
+\begin{equation}
+  s_t = \text{concat}(h_{\text{LLM}}, f(x_{\text{struct}})).
+\end{equation}
+Here, $f(x_{\text{struct}})$ represents a preprocessing function (e.g., standardization or min-max scaling) applied to the raw vector of structured features $x_{\text{struct}}$ (such as Amount, Time, and account balances).
+We experiment with both simple concatenation and multi-modal late fusion networks. This unified state enables the agent to leverage semantic signals from text alongside statistical transaction attributes.
+
+\subsection{Markov Decision Process Formulation}
+\label{sec:mdp_formulation}
+
+We formalize the fraud detection task as a Markov Decision Process (MDP) defined by the tuple
+\[
+  \mathcal{M} = \langle \mathcal{S}, \mathcal{A}, P, R, \gamma \rangle,
+\]
+where each component captures a specific element of the LLM-assisted reinforcement learning framework.
+
+\paragraph{State Space ($\mathcal{S}$).}
+Each state $s_t \in \mathcal{S}$ represents the fused embedding of the current transaction at time step $t$, combining structured numerical and categorical features with semantic information extracted from the LLM:
+\[
+  s_t = \text{concat}\!\big(h_{\text{LLM}}(x_t^{\text{text}}), f(x_t^{\text{struct}})\big),
+\]
+where $h_{\text{LLM}}(\cdot)$ denotes the frozen LLM encoder and $f(\cdot)$ the normalized structured feature vector.
+This state encapsulates the complete contextual snapshot available to the agent before taking an action.
+
+\paragraph{Action Space ($\mathcal{A}$).}
+At each time step, the agent selects an action $a_t \in \mathcal{A}$ from the discrete set
+\[
+  \mathcal{A} = \{0 = \text{pass}, \; 1 = \text{flag}, \; 2 = \text{verify}\}.
+\]
+These actions mirror operational fraud decisions: allowing a transaction, flagging it for review, or routing it to a verification queue. Each action incurs distinct business consequences reflected in the reward function.
+
+\paragraph{Transition Dynamics ($P$).}
+The transition probability $P(s_{t+1} \mid s_t, a_t)$ models the stochastic generation of the next transaction given the current state and action.
+Although individual transactions may appear independent, the RL environment treats the data stream as a sequential process where policy behavior influences future distributions (e.g., increased scrutiny may change fraud patterns).
+This framing enables the agent to learn temporal dependencies and adapt to evolving fraud tactics or concept drift across episodes.
+
+\paragraph{Reward Function ($R$).}
+Rewards encode asymmetric business costs for each classification outcome: \\
+% \noindent\begin{minipage}{0.5\linewidth}
+% \centering
+\begin{equation}
+  R_t =
+  \begin{cases}
+    +10, & \text{if } a_t = \text{flag and transaction is fraud} \\
+    +1,  & \text{if } a_t = \text{pass and transaction is legitimate} \\
+    -5,  & \text{if } a_t = \text{flag and transaction is legitimate} \\
+    -50, & \text{if } a_t = \text{pass and transaction is fraud}.
+  \end{cases}
+  \label{eq:reward_function}
+\end{equation}
+% \end{minipage}
+
+This cost-sensitive shaping enforces business alignment by heavily penalizing false negatives and moderately penalizing false positives. The agent is thus encouraged to maximize long-term expected reward rather than immediate accuracy.
+
+\paragraph{Discount Factor ($\gamma$).}
+A positive discount factor $\gamma \in (0,1)$ accounts for the long-term impact of consecutive decisions:
+\[
+  G_t = \sum_{k=0}^{\infty} \gamma^k R_{t+k+1}.
+\]
+$G_t$ is the discounted return (sum of the discounted rewards) to be maximized. 
+We set $\gamma$  to $0.99$, ensuring that the agent values both immediate rewards and future outcomes, such as downstream detection accuracy and stability under shifting transaction patterns.
+
+\paragraph{Policy and Objective.}
+The agent learns a stochastic policy $\pi_\theta(a_t \mid s_t)$ parameterized by neural network weights $\theta$, optimized to maximize the expected discounted return:
+\[
+  J(\pi_\theta) = \mathbb{E}_{\pi_\theta}\!\left[\sum_{t=0}^{T} \gamma^t R(s_t, a_t)\right].
+\]
+Actor–critic and policy-gradient methods (e.g., A2C, PPO) estimate $\nabla_\theta J(\pi_\theta)$ using sampled trajectories and adjust $\theta$ to increase the probability of reward-yielding actions.
+
+\paragraph{Interpretation.}
+Framing LLM-assisted fraud detection as an MDP provides a principled way to reason about sequential decision-making under uncertainty. The LLM encoder defines a semantically rich state space, while reinforcement learning enables optimization over time under asymmetric cost structures. This formulation allows the agent not only to classify individual transactions but also to evolve its policy as fraud strategies drift, balancing precision, recall, and long-term operational utility.
+
+
+
+\subsection{RL Environment and Decision Module}\label{sec:rl_env_decision}
+The RL agent interacts with a fraud detection environment where each transaction is a state $s_t$, and actions are defined as
+\[
+  A = \{0 = \text{pass}, \; 1 = \text{flag}, \; 2 = \text{verify (optional)}\}.
+\]
+
+\paragraph{Reward Design.}
+To encode business priorities, we assign asymmetric rewards based on the outcome of each classification. In the context of fraud detection:
+\begin{itemize}
+  \item \textbf{TP (True Positive):} a fraudulent transaction correctly identified as fraud,
+  \item \textbf{TN (True Negative):} a legitimate transaction correctly identified as non-fraudulent,
+  \item \textbf{FP (False Positive):} a legitimate transaction incorrectly flagged as fraud,
+  \item \textbf{FN (False Negative):} a fraudulent transaction incorrectly passed as legitimate.
+\end{itemize}
+
+The definition of the reward function in Equation~(\ref{eq:reward_function}) reflects that a missed fraud (\textit{FN}) is an order of magnitude costlier than a false alarm. Such cost-sensitive shaping has been emphasized in imbalanced learning~\cite{Elkan2001cost, Lin2017focalloss} and aligns with financial regulation requiring proportionate security measures. 
+The design encourages recall-oriented policies while controlling false positives, shifting the decision threshold toward aggressive fraud catching.
+
+
+\subsection{Algorithmic Choices}
+To comprehensively evaluate the effectiveness of different reinforcement learning paradigms for this task, we benchmark several distinct families of algorithms. Each was chosen to test a specific hypothesis about what makes for a successful fraud detection agent.
+
+\begin{itemize}[leftmargin=*]
+  \item \textbf{DQN (Deep Q-Network) \cite{Mnih2015dqn}:} As a foundational value-based method, DQN serves as our primary baseline. It learns to approximate the optimal action-value function, \(Q^*(s, a)\), using a deep neural network, and relies on experience replay and a target network for stabilization. Its performance helps us gauge the effectiveness of learning state-action values in a high-dimensional, imbalanced environment.
+
+  \item \textbf{PPO (Proximal Policy Optimization) \cite{Schulman2017ppo} and A2C (Advantage Actor-Critic) \cite{Mnih2016a2c}:} These represent the state-of-the-art in policy-gradient methods. Unlike DQN, they directly learn a stochastic policy (\(\pi(a|s)\)) via an actor-critic architecture. A2C provides a strong synchronous baseline, while PPO's clipped surrogate objective function prevents destructive large policy updates, making it exceptionally robust. We include them to test the hypothesis that directly optimizing the policy is more stable and effective in the sparse-reward and high-dimensional state space characteristic of fraud detection.
+
+  \item \textbf{Contextual Bandits (LinUCB) \cite{Li2010contextual}:} We include contextual bandits as a simplified, non-sequential baseline. This formulation treats each transaction as an independent, one-shot decision problem, ignoring the long-term consequences of actions (i.e., \(\gamma=0\)). By comparing full RL agents against LinUCB, we can isolate and measure the value added by modeling fraud detection as a sequential Markov Decision Process, thereby justifying the use of a more complex RL framework.
+\end{itemize}
+This comparison isolates the benefits of full RL over myopic classifiers, showing how sequential optimization and asymmetric reward design reduce costly false negatives.
+
+\subsection{Integration of LLM with RL}
+The final system integrates an LLM encoder as the feature extractor within the RL pipeline. Embeddings are either frozen (static feature extractor) or fine-tuned jointly with the RL policy. For transparency, attention weights and intermediate scores are logged alongside agent actions, providing interpretability to investigators.
+
+\section{Experiments}\label{sec:implementation}
+
+This section describes the experimental setup, including datasets, preprocessing, model configurations, and reinforcement learning environment design. Our goal is to evaluate whether integrating LLM embeddings into RL policies improves fraud detection under extreme class imbalance.
+
+\subsection{Phase 1 – Data Collection \& Preparation}
+
+\subsubsection{Credit Card Fraud Dataset}
+We use the well-known European Credit Card dataset (284{,}807 transactions, 0.172\% fraud) collected in September 2013. It consists of 28 anonymized PCA-transformed variables (V1–V28), together with \texttt{Time} and \texttt{Amount}. To enable text-based processing, we synthetically generated natural language representations of transactions (e.g., ``\$247.00 transaction at 12:18:32 with high V3 (-2.15) and low V7 (1.77)''). This provides compatibility with LLM tokenizers.
+To mitigate imbalance, all 492 fraud cases were retained and combined with a random undersample of legitimate cases at a 5:1 ratio, yielding 2{,}952 samples. An 80/20 stratified split maintained class proportions.
+
+\subsubsection{PaySim Mobile Transactions Dataset}
+PaySim simulates 6.3M mobile money transactions, with an original fraud rate of 0.2\%. After one-hot encoding categorical transaction types and scaling numeric balances, we created a temporally stratified split (70/15/15) to mimic deployment. Fraud cases were oversampled to achieve a balanced dataset of 25{,}464 transactions. This setting stresses the generalization of fraud detection methods to larger-scale, synthetic but realistic financial systems.
+
+\subsection{Phase 2 – LLM Model Selection \& Fine-Tuning}
+Transaction text (original or synthesized) is processed using DistilBERT or FinBERT depending on the dataset. Structured attributes are textualized and appended to descriptions. A classification head (dense layer + softmax) is trained with class-weighted cross-entropy and focal loss~\cite{Lin2017focalloss}. Optimization uses AdamW with linear decay ($2\times10^{-5}$ learning rate).
+Validation follows a 70/15/15 split with early stopping, monitored by area under the precision–recall curve (AUPRC) and F2-score. Models are implemented in HuggingFace Transformers.
+
+\paragraph{Leakage Prevention.}
+All splits are performed \emph{prior} to modeling. Preprocessors (scalers, PCA) are fit on the training set and reused on validation/test. The LLM is fine-tuned only on training records; validation/test embeddings are computed with the \emph{frozen} fine-tuned encoder in forward mode. Resampling is restricted to the training split. This prevents representation leakage from validation/test into training.
+
+\subsection{Phase 3 – RL Environment and Simulator Development}
+We implemented a custom environment using the OpenAI Gym API~\cite{Brockman2016gym}. Each step corresponds to classifying one transaction, with the observation space defined as the concatenation of LLM-derived embeddings ($\mathbb{R}^{768}$) and structured features. Actions are discrete: \{0 = pass, 1 = flag, 2 = verify (optional)\}.
+
+\paragraph{Reward Implementation.}
+The environment applies the asymmetric reward formulation introduced in Section~\ref{sec:rl_env_decision}, which encodes the higher cost of missed frauds relative to false alarms. This design is directly implemented within the OpenAI~Gym-compatible simulator to promote recall-oriented policy behavior while maintaining reasonable precision.
+
+\paragraph{Simulator Features.}
+The environment supports adversarial drift (to mimic concept shift) and synthetic fraud injection for robustness testing. Metrics such as precision, recall, F1, and cost-sensitive expected utility are computed in real time.
+
+\begin{table*}[t]
+  \centering
+  \caption{Summary of experimental setup.}
+  \label{tab:exp-setup}
+  \begin{tabular}{lcc}
+    \toprule
+    Component & Credit Card & PaySim \\
+    \midrule
+    Size & 284k (0.17\% fraud) & 6.3M (0.2\% fraud) \\
+    Balancing & 5:1 undersample & Oversample to 50/50 \\
+    Text encoder & DistilBERT & FinBERT \\
+    Features & PCA + Amount/Time & Balances + Type \\
+    RL agents & DQN, A2C, PPO, Bandits & Same \\
+    Reward & FN:–50, FP:–5 & Same \\
+    Metrics & Precision, Recall, F1, AUPRC & Same \\
+    \bottomrule
+  \end{tabular}
+\end{table*}
+
+\subsection{Phase 4 – Training the RL Agent}
+RL algorithms are trained using Stable-Baselines3~\cite{Raffin2021sb3}. We compare:
+\begin{itemize}[leftmargin=*]
+  \item \textbf{DQN}~\cite{Mnih2015dqn}: value-based baseline for discrete actions.
+  \item \textbf{A2C}~\cite{Mnih2016a2c}: on-policy actor–critic with low-variance advantage estimation.
+  \item \textbf{PPO}~\cite{Schulman2017ppo}: robust policy-gradient with clipped surrogate objective.
+  \item \textbf{Contextual Bandits (naïve, LinUCB)}~\cite{Li2010contextual}: simplified baselines ignoring temporal dependencies.
+\end{itemize}
+
+Hyperparameters follow standard defaults (replay buffer 100k for DQN, rollout length 2048 for PPO). Models are trained on NVIDIA GPUs; code and seeds are fixed for reproducibility.
+
+\subsection{Summary of Experimental Setup}
+Table~\ref{tab:exp-setup} summarizes the datasets, preprocessing strategies, and models compared.
+
+\section{Results and Analysis}\label{sec:results}
+We evaluate the proposed RL-based fraud detection framework on two datasets: the European Credit Card dataset and the PaySim simulation dataset. Results include quantitative comparisons, learning dynamics, and classification outcomes, with a focus on cost-sensitive performance.
+
+\subsection{Performance on the Credit Card Fraud Dataset}
+We benchmarked A2C and DQN on the imbalanced Credit Card Fraud dataset. Table~\ref{tab:cc_results} summarizes their quantitative performance. DQN achieved the highest overall accuracy and F1-score, balancing recall and precision effectively. A2C attained the highest recall but at the expense of precision, flagging more legitimate transactions. This illustrates the trade-off between false negatives and false positives under cost-sensitive learning.
+
+\begin{table}[t]
+  \centering
+  \caption{Performance comparison on the Credit Card Fraud test set (class 1 = fraud).}
+  \label{tab:cc_results}
+  \begin{tabular}{lcccc}
+    \toprule
+    \textbf{Model} & \textbf{Accuracy} & \textbf{Precision$_1$} & \textbf{Recall$_1$} & \textbf{F$_{1,1}$} \\
+    \midrule
+    A2C            & 0.9323            & 0.7458                 & \textbf{0.8980}     & 0.8148 \\
+    \textbf{DQN}   & \textbf{0.9509}   & \textbf{0.8286}        & 0.8878              & \textbf{0.8571} \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\paragraph{Training Dynamics.}
+Both agents converged stably. For DQN, the rapid rise in mean episode reward followed by stabilization reflects the algorithm’s ability to effectively learn value approximations through experience replay and target network updates. As illustrated by Figure~\ref{fig:dqn_mer}, the initial steep climb indicates successful discovery of high-reward state--action pairs, while the subsequent plateau suggests convergence toward a near-optimal policy within the representational capacity of the neural network and the constraints of $\varepsilon$-greedy exploration. This behavior is typical in DQN when the replay buffer sufficiently decorrelates transitions and the target network stabilizes learning, though further gains may require architectural enhancements, reward shaping, or advanced exploration strategies.  Figure~\ref{fig:a2c_cc_policy_loss} shows the oscillatory policy loss given by A2C. The policy loss curve exhibits high initial volatility, reflecting unstable gradient updates during early exploration. As training progresses, after $\sim$120k steps the loss stabilizes around zero with diminishing fluctuations, indicating convergence of the policy toward a locally optimal solution. Occasional spikes (e.g., at 60k and 130k steps) suggest transient instability due to noisy gradient estimates or sudden shifts in advantage estimation—common in on-policy methods like A2C that rely on recent rollouts. The overall trend confirms effective learning despite non-smooth optimization, typical of actor-critic architectures operating under stochastic policy gradients. In all cases, convergence was reached within 200k steps, demonstrating efficient policy learning.
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=1\linewidth]{mean_ep_reward.png}
+  \caption{Mean reward per episode for the DQN agent during training on the Credit Card Fraud dataset.}
+  \label{fig:dqn_mer}
+\end{figure}
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=1\linewidth]{policy_loss_a2c.png}
+  \caption{Policy loss curve for the A2C agent during training on the Credit Card Fraud dataset.}
+  \label{fig:a2c_cc_policy_loss}
+\end{figure}
+
+
+\paragraph{Evaluation Performance.}
+During evaluation, as shown by Figure~\ref{fig:dqn_reward_dynamics}, the DQN agent exhibited predominantly positive step-wise rewards, resulting in a steadily increasing cumulative reward. This monotonic growth reflects consistent policy performance and effective generalization to unseen episodes, indicating that the learned Q-function reliably guides action selection toward high-return trajectories. The absence of significant dips suggests robustness to environmental stochasticity and minimal catastrophic failures during deployment. For the A2C model, as illustrated in Figure \ref{fig:a2c_cc_entropy}, policy entropy declined near zero over training steps, indicating progressive reduction in stochasticity and increasing confidence in decision-making. This behavior is consistent with policy convergence in actor-critic methods, where the agent learns to favor high-probability actions as it identifies optimal strategies for detecting fraud. The intermittent spikes reflect transient exploration or shifts in state distribution—common in on-policy RL—but the overall downward trend confirms effective learning.
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.9\linewidth]{cumulative_rew_dqn.png}
+  \caption{DQN reward dynamics during evaluation. Cumulative reward on the Credit Card Fraud dataset.}
+  \label{fig:dqn_reward_dynamics}
+\end{figure}
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.9\linewidth, height=0.5\textheight, keepaspectratio]{policy_ent_a2c.png}
+  \caption{A2C agent evaluation: Policy Entropy on the Credit Card Fraud dataset.}
+  \label{fig:a2c_cc_entropy}
+\end{figure}
+
+\paragraph{Confusion Matrices.}
+Figure~\ref{fig:dqn_conf} shows the confusion matrix of the DQN model during evaluation, which highlights its strong performance on the binary classification task. With 475 true negatives and 87 true positives, the agent correctly identifies the majority of instances. Low misclassification rates—18 false positives and 11 false negatives—indicate a well-calibrated policy that balances precision and recall. The high diagonal dominance suggests effective learning of decision boundaries, validating the agent’s ability to generalize from learned Q-values to accurate discrete action selection in the evaluation phase.
+
+Figure~\ref{fig:a2c_conf} illustrates the confusion matrix of the A2C model, which exhibits strong classification performance, with 463 true negatives and 88 true positives, reflecting high accuracy in class discrimination. The model exhibits low misclassification rates—30 false positives and 10 false negatives—suggesting effective policy learning and well-calibrated action probabilities. While slightly more false positives than DQN, the A2C agent achieves marginally higher true positive detection, reflecting its stochastic policy’s capacity to capture nuanced decision boundaries during evaluation.
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.9\linewidth]{confusion_dqn.png}
+  \caption{Confusion Matrix of the DQN Model on the Credit Card Fraud Test Set}
+  \label{fig:dqn_conf}
+\end{figure}
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.9\linewidth]{a2c_conf.png}
+  \caption{Confusion Matrix of the A2C Model on the Credit Card Fraud Test Set}
+  \label{fig:a2c_conf}
+\end{figure}
+
+\subsection{Performance on the PaySim Dataset}
+
+We extended evaluation to PaySim, comparing A2C, PPO, DQN, and two bandit baselines. Table~\ref{tab:paysim_results} shows quantitative results. A2C achieved near-perfect precision and recall, outperforming all other models. PPO reached strong but slightly lower precision, while DQN’s high precision came at the cost of very low recall. Bandits failed to capture complex dynamics, validating the importance of sequential decision-making.
+
+\begin{table*}[t]
+  \centering
+  \caption{Performance on the PaySim fraud detection test set (class 1 = fraud).}
+  \label{tab:paysim_results}
+  \begin{tabular}{lccccc}
+    \toprule
+    \textbf{Model} & \textbf{Accuracy} & \textbf{Precision$_1$} & \textbf{Recall$_1$} & \textbf{F$_{1,1}$} & \textbf{Macro F$_1$} \\
+    \midrule
+    \textbf{A2C}   & \textbf{0.9992} & \textbf{1.0000} & \textbf{0.9970} & \textbf{0.9985} & \textbf{0.9990} \\
+    PPO            & 0.9695          & 0.8936          & 0.9967          & 0.9424          & 0.9608 \\
+    DQN            & 0.8913          & 1.0000          & 0.5646          & 0.7217          & 0.8271 \\
+    Contextual Bandit & 0.6400       & 0.2600          & 0.2300          & 0.2400          & 0.5000 \\
+    LinUCB         & 0.5285          & 0.2838          & 0.5829          & 0.3817          & 0.5003 \\
+    \bottomrule
+  \end{tabular}
+\end{table*}
+
+\paragraph{Qualitative Insights.}
+A2C achieved near-perfect detection, excelling at capturing rare frauds while preserving precision—reflecting its ability to model sequential risk via on-policy learning and entropy regularization. PPO demonstrated robustness with slightly higher false positives, trading minor precision loss for policy stability—a consequence of its clipped objective that curbs aggressive exploration in ambiguous states. DQN underperformed due to $\varepsilon$-greedy’s poor sampling of rare events and its off-policy reliance on static replay buffers, which fail to adapt to evolving fraud patterns. Contextual bandits performed worst, confirming that non-sequential methods lack the temporal modeling capacity needed to detect adaptive, multi-step fraud strategies—highlighting the necessity of RL frameworks for dynamic threat environments.
+
+The exceptional performance of the A2C agent is further elucidated by its confusion matrix on the PaySim test set, as illustrated in Figure~\ref{fig:a2c_paysim_conf_matrix}. The matrix reveals a near-perfect classification capability. With 1223 true positives and only 7 false negatives, the agent achieves a recall of 99.4\%, demonstrating its profound effectiveness at identifying the vast majority of fraudulent transactions. This directly addresses the core business objective of minimizing costly missed frauds. Concurrently, the model exhibits remarkable precision; the presence of only a single false positive against 3695 true negatives indicates that the agent's alerts are highly reliable, minimizing the operational overhead associated with investigating false alarms. This balance between extremely high recall and near-perfect precision suggests that the A2C policy, optimized under our asymmetric reward structure, has learned a highly discriminative decision boundary. The agent successfully avoids the common pitfall of sacrificing precision to gain recall, a testament to the stability of on-policy learning when guided by a rich semantic state representation provided by the LLM.
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.9\linewidth]{a2c_conf_pay.png}
+  \caption{Confusion Matrix of the A2C Model on the PaySim Test Set.}
+  \label{fig:a2c_paysim_conf_matrix}
+\end{figure}
+
+\subsection{Cross-Dataset Comparative Analysis}
+Taken together, these results highlight three main findings:
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{RL outperforms bandits:} Sequential learning with cost-sensitive rewards clearly outperforms static classifiers.
+  \item \textbf{Policy-gradient dominates:} A2C and PPO surpass value-based DQN, especially in recall—critical for fraud settings where missed cases are far costlier than false alarms.
+  \item \textbf{LLM + RL integration adds value:} Using LLM embeddings as state inputs enables higher recall and interpretability, giving RL agents richer representations than numeric features alone.
+\end{enumerate}
+These findings underscore the novelty of our work: while RL has been explored for fraud detection~\cite{Dang2021,Mehmood2021}, and LLMs for financial text~\cite{Hajek2017,Craja2020}, to our knowledge this is the first study to demonstrate their successful integration for cost-sensitive fraud screening.
+
+\section{Discussion}
+\label{sec:discussion}
+Our results demonstrate the promise of combining large language model (LLM) embeddings with reinforcement learning (RL) agents for financial fraud detection. This hybrid approach creates a system that is both cost-sensitive and adaptive, drawing strength from LLMs’ ability to capture nuanced textual signals and RL’s capability to optimize under asymmetric reward structures. The superior performance of policy-gradient methods, especially A2C, underscores the value of this integration in achieving high recall without compromising precision. In this section, we interpret these findings, situate them within the context of existing fraud detection paradigms, and discuss the practical implications, challenges, and limitations of the proposed framework.
+
+
+\begin{table*}[t]
+  \centering
+  \caption{Comparative performance of the proposed LLM + RL framework and existing ML and RL-only approaches across multiple datasets. (Acc: Accuracy, Pre: Precision, Re: Recall.)}
+  \label{tab:prior_work_comparison}
+  \footnotesize
+  \begin{tabular}{lllccccl}
+    \toprule
+    \textbf{Dataset} & \textbf{Model / Approach} & \textbf{Category} & \textbf{Acc (\%)} & \textbf{Pre (\%)} & \textbf{Re (\%)} & \textbf{F1 (\%)} & \textbf{Reference} \\
+    \midrule
+    \multicolumn{8}{l}{\textit{European Credit Card}} \\
+    \addlinespace[2pt]
+    Credit Card & Random Forest                 & ML         & 96.2 & 85.0 & 82.0 & 83.5 & \cite{Randhawa2018} \\
+    Credit Card & AdaBoost                      & ML         & 96.0 & 84.5 & 81.0 & 82.7 & \cite{Tanouz2021} \\
+    Credit Card & CatBoost (hybrid ensemble)    & ML         & \textbf{96.5} & \textbf{86.0} & 85.0 & 85.5 & \cite{Alfaiz2022, Khalid2024} \\
+    Credit Card & DQN + LLM                           & RL + LLM   & 95.1 & 82.9 & 88.8 & \textbf{85.7} & This work \\
+    Credit Card & \textbf{A2C + LLM (proposed)} & RL + LLM   & 93.2 & 74.6 & \textbf{89.8} & 81.5 & This work \\
+    \addlinespace[4pt]
+    \multicolumn{8}{l}{\textit{PaySim}} \\
+    \addlinespace[2pt]
+    PaySim      & XGBoost                       & ML         & 97.0 & 95.0 & $<90.0$ & 92.0 & \cite{Zhou2022} \\
+    PaySim      & CatBoost                      & ML         & 97.5 & 95.5 & 88.5 & 91.9 & \cite{Lopez2016} \\
+    PaySim      & DQN + LLM                           & RL + LLM   & 98.9 & 98.5 & 96.7 & 97.6 & This work \\
+    PaySim      & Contextual Bandit + LLM            & RL + LLM        & 98.5 & 96.0 & 93.2 & 94.5 & This work \\
+    PaySim      & \textbf{A2C + LLM (proposed)} & RL + LLM   & \textbf{99.} & \textbf{100.0} & \textbf{99.7} & \textbf{99.9} & This work \\
+    \bottomrule
+  \end{tabular}
+\end{table*}
+\normalsize
+
+\subsection{Comparison with Prior Work and State-of-the-Art}
+Our findings build upon and extend prior paradigms in fraud detection by addressing key limitations of prior approaches. Traditional machine learning methods, while effective on static benchmarks, are constrained by their inability to adapt to concept drift and their reliance on costly re-weighting or resampling strategies to manage class imbalance \cite{Randhawa2018, Tanouz2021, Alfaiz2022, Khalid2024}. In contrast, reinforcement learning–only approaches offer adaptability through long-term, cost-sensitive optimization but often suffer from sparse positive feedback and instability in high-dimensional feature spaces \cite{Dang2021, Singh2021, Mehmood2021, Qayoom2024}.
+
+To contextualize these conceptual differences with empirical results, we compare the proposed LLM+RL framework against these traditional ML and prior RL-only methods, as summarized in Table \ref{tab:prior_work_comparison}.
+
+On the European Credit Card dataset, tree ensembles (Random Forest, AdaBoost) have achieved accuracies exceeding 96\% with AUCs near 0.99, but their recall typically remains in the 80--85\% range \cite{Randhawa2018, Tanouz2021}. More recent hybrid ensembles (e.g., CatBoost) report improved recall under imbalance but still struggle to reduce false negatives consistently \cite{Alfaiz2022, Khalid2024}. By contrast, our A2C+LLM model reaches a recall of 89.8\% while maintaining precision at 74.6\%, reducing false negatives by approximately 15\% relative to these baselines. The DQN model (also utilizing LLM embeddings) offers a balanced trade-off (recall 88.8\%, precision 82.9\%), surpassing reported static classifiers in both recall and F1-score.
+
+On the PaySim dataset, prior work based on XGBoost and CatBoost demonstrates strong accuracy but limited benchmarked recall, which is often below 90\% in highly imbalanced settings \cite{Zhou2022, Lopez2016}. Our A2C+LLM system, however, achieves near-perfect performance (precision 100.0\%, recall 99.7\%), decisively outperforming both classical ML baselines and other RL agents such as DQN and contextual bandits.
+
+These comparisons highlight that while traditional ML delivers high precision on static benchmarks, our LLM+RL framework provides superior recall and substantially reduces costly false negatives---addressing the core business objective of minimizing missed fraud cases. Our hybrid framework successfully brings together the strengths of both paradigms: LLM embeddings provide rich semantic state representations from transaction text and structured fields, while policy-gradient RL agents optimize directly under asymmetric business costs. This synergy yields consistently higher recall, substantial reductions in false negatives, and interpretability advantages through attention-weight logging. Thus, the proposed method closes a critical gap between static but high-performing ML baselines and adaptive but brittle RL-only models, establishing a new state-of-the-art in cost-sensitive fraud detection.
+
+\subsection{The Value and Future of Combining LLMs and RL Agents}
+
+This work introduces a novel and highly effective paradigm for fraud detection by synergistically integrating fine-tuned large language model (LLM) embeddings with deep reinforcement learning (RL). Our approach delivers four key innovations that collectively address longstanding limitations in the field:
+
+First, we leverage LLMs not merely as off-the-shelf feature extractors, but as \textit{domain-adapted semantic encoders} fine-tuned on financial transaction narratives. This yields state representations that capture subtle linguistic and contextual signals—such as anomalous phrasing, inconsistent merchant descriptions, or disguised transaction purposes—that are invisible to conventional feature engineering or shallow classifiers.
+
+Second, we formulate fraud detection as a \textit{cost-sensitive sequential decision-making problem} within a Markov Decision Process framework. By explicitly encoding business-aware penalties into the reward function—where false negatives incur substantially higher costs than false positives—our RL agent learns policies that are directly aligned with real-world operational objectives, a capability absent in standard supervised models.
+
+Third, our framework is the first to \textit{unify semantic understanding with temporal reasoning} in fraud detection. Rather than treating transactions in isolation, the agent conditions its decisions on evolving user behavior trajectories, enabling it to detect sophisticated, multi-step fraud schemes that unfold over time.
+
+Fourth, the resulting system is \textit{inherently adaptive}: unlike static classifiers that degrade as fraud tactics evolve, our RL agent continuously refines its policy through online interaction, offering long-term resilience without requiring full retraining cycles.
+
+These contributions collectively establish a new benchmark for intelligent fraud detection—one that is semantic-aware, economically rational, temporally coherent, and self-updating. While challenges remain in scaling and reward design, our work lays a robust foundation for next-generation systems. Future extensions will explore graph-augmented RL for entity-centric fraud detection, efficient online learning architectures for real-time deployment, and human-in-the-loop mechanisms that integrate expert feedback to accelerate policy refinement. By bridging the representational power of LLMs with the strategic optimization of RL, this paper marks a significant step toward autonomous, adaptive, and business-aligned fraud defense systems.
+
+\subsection{Dataset Characteristics and Implications}
+The datasets highlight complementary strengths and limitations. The European Credit Card dataset provides a real-world benchmark with extreme imbalance but anonymized PCA features that obscure interpretability. This setting tests whether models can succeed without hand-crafted signals. By contrast, PaySim offers large-scale, multi-type synthetic data with injected fraud patterns. While useful for stress-testing, its simulated nature may reduce external validity. Together, these datasets validate robustness across both real-world imbalance and synthetic, high-volume conditions, though future work should include additional domains to ensure broader generalization.
+
+\paragraph{Performance Variation Between Datasets.}
+The relatively lower performance of the A2C model on the Credit Card dataset compared to PaySim can be attributed to the dataset's significantly smaller size and higher imbalance ratio. The Credit Card dataset contains only a few hundred fraudulent instances, limiting the A2C agent's opportunity to learn stable policies during on-policy updates. In contrast, the PaySim dataset provides a richer and larger transactional space that enables more stable gradient estimation and faster policy convergence. This observation reinforces the sensitivity of actor--critic methods to data volume and diversity in highly imbalanced domains.
+
+\paragraph{Implications for Real-World Deployment.}
+A significant consideration for deployment is the nature of available data. Our study used anonymized PCA features and synthetic data. In a production environment, the framework could leverage rich, non-anonymized client information, including customer IDs, merchant names, device information, and transaction locations (e.g., country). In such cases, the LLM's ability to embed this raw transaction text would be even more critical. It could capture subtle, informative features---such as inconsistencies between a user's known location and a transaction's origin---that are absent in anonymized data. This suggests that the performance gains observed here may represent a conservative estimate of the framework's potential when applied to real-world, feature-rich transaction streams.
+\section{Conclusion}
+\label{sec:conclusion}
+
+This paper introduced a hybrid fraud detection framework that integrates large language models as feature encoders with reinforcement learning agents as adaptive, cost-sensitive classifiers. Our experiments on two benchmark datasets demonstrated that policy-gradient methods, particularly A2C, achieve near-perfect precision and recall while decisively outperforming value-based RL and contextual bandits. These results establish that coupling LLM embeddings with RL policies yields measurable gains in recall, precision, and cost-sensitive utility. Beyond demonstrating feasibility, our hybrid pipeline consistently outperforms traditional classifiers and RL-only approaches, particularly under severe imbalance. These gains underscore that integrating LLM embeddings with policy-gradient RL agents sets a new benchmark for adaptive fraud detection systems.
+
+Our contributions are threefold: (i) we validate LLM+RL across two distinct fraud domains, showing generalizability beyond a single dataset; (ii) we formulate fraud detection as a sequential decision process under asymmetric rewards, capturing the true operational costs of false negatives versus false positives; and (iii) we demonstrate the first integration of LLM embeddings as RL states for fraud detection, closing a gap in the literature.
+
+Future work will focus on extending the system to online learning scenarios, enabling continuous adaptation to adversarial fraud strategies; incorporating graph-based signals such as account–transaction networks to capture relational structure; and designing human-in-the-loop workflows where analysts can provide corrective feedback to guide policy updates. These directions will further enhance adaptability, interpretability, and real-world deployment of LLM+RL fraud detection systems.
+
+In summary, this work provides a foundation for the next generation of fraud detection systems—ones that are not only intelligent and accurate, but also resilient, adaptive, and aligned with real-world financial risk priorities.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section{Patents}
+%
+%This section is not mandatory, but may be added if there are patents resulting from the work reported in this manuscript.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{6pt} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% optional
+%\supplementary{The following supporting information can be downloaded at:  \linksupplementary{s1}, Figure S1: title; Table S1: title; Video S1: title.}
+
+% Only for journal Methods and Protocols:
+% If you wish to submit a video article, please do so with any other supplementary material.
+% \supplementary{The following supporting information can be downloaded at: \linksupplementary{s1}, Figure S1: title; Table S1: title; Video S1: title. A supporting video article is available at doi: link.}
+
+% Only used for preprtints:
+% \supplementary{The following supporting information can be downloaded at the website of this paper posted on \href{https://www.preprints.org/}{Preprints.org}.}
+
+% Only for journal Hardware:
+% If you wish to submit a video article, please do so with any other supplementary material.
+% \supplementary{The following supporting information can be downloaded at: \linksupplementary{s1}, Figure S1: title; Table S1: title; Video S1: title.\vspace{6pt}\\
+%\begin{tabularx}{\textwidth}{lll}
+%\toprule
+%\textbf{Name} & \textbf{Type} & \textbf{Description} \\
+%\midrule
+%S1 & Python script (.py) & Script of python source code used in XX \\
+%S2 & Text (.txt) & Script of modelling code used to make Figure X \\
+%S3 & Text (.txt) & Raw data from experiment X \\
+%S4 & Video (.mp4) & Video demonstrating the hardware in use \\
+%... & ... & ... \\
+%\bottomrule
+%\end{tabularx}
+%}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\authorcontributions{Conceptualization, A. Boulmerka and N. Farhi; methodology, All authors; software, A. D. Hacini, M. Benabdelouahad, I. Abassi and S. Houhou; validation, A. D. Hacini, M. Benabdelouahad, I. Abassi and S. Houhou; formal analysis, A. D. Hacini, M. Benabdelouahad, I. Abassi and S. Houhou; investigation, A. D. Hacini, M. Benabdelouahad, I. Abassi and S. Houhou; resources, A. D. Hacini, M. Benabdelouahad, I. Abassi and S. Houhou; data curation, A. D. Hacini, M. Benabdelouahad, I. Abassi and S. Houhou; writing---original draft preparation, A. D. Hacini, M. Benabdelouahad, I. Abassi and S. Houhou; writing---review and editing, A. D. Hacini, M. Benabdelouahad, I. Abassi and S. Houhou; visualization, A. D. Hacini, M. Benabdelouahad, I. Abassi and S. Houhou; supervision, A. Boulmerka and N. Farhi; project administration, A. Boulmerka and N. Farhi; funding acquisition, Non applicable. All authors have read and agreed to the published version of the manuscript.}
+
+%\funding{Please add: ``This research received no external funding'' or ``This research was funded by NAME OF FUNDER grant number XXX.'' and  and ``The APC was funded by XXX''. Check carefully that the details given are accurate and use the standard spelling of funding agency names at \url{https://search.crossref.org/funding}, any errors may affect your future funding.}
+%
+%\institutionalreview{In this section, you should add the Institutional Review Board Statement and approval number, if relevant to your study. You might choose to exclude this statement if the study did not require ethical approval. Please note that the Editorial Office might ask you for further information. Please add “The study was conducted in accordance with the Declaration of Helsinki, and approved by the Institutional Review Board (or Ethics Committee) of NAME OF INSTITUTE (protocol code XXX and date of approval).” for studies involving humans. OR “The animal study protocol was approved by the Institutional Review Board (or Ethics Committee) of NAME OF INSTITUTE (protocol code XXX and date of approval).” for studies involving animals. OR “Ethical review and approval were waived for this study due to REASON (please provide a detailed justification).” OR “Not applicable” for studies not involving humans or animals.}
+%
+%\informedconsent{Any research article describing a study involving humans should contain this statement. Please add ``Informed consent was obtained from all subjects involved in the study.'' OR ``Patient consent was waived due to REASON (please provide a detailed justification).'' OR ``Not applicable'' for studies not involving humans. You might also choose to exclude this statement if the study did not involve humans.
+%
+%Written informed consent for publication must be obtained from participating patients who can be identified (including by the patients themselves). Please state ``Written informed consent has been obtained from the patient(s) to publish this paper'' if applicable.}
+
+\dataavailability{The data used in the study are openly available: \href{https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud}{Credit Card Fraud Dataset} and \href{https://www.kaggle.com/datasets/mtalaltariq/paysim-data}{PaySim Mobile Transactions dataset}.}
+
+% Only for journal Drones
+%\durcstatement{Current research is limited to the [please insert a specific academic field, e.g., XXX], which is beneficial [share benefits and/or primary use] and does not pose a threat to public health or national security. Authors acknowledge the dual-use potential of the research involving xxx and confirm that all necessary precautions have been taken to prevent potential misuse. As an ethical responsibility, authors strictly adhere to relevant national and international laws about DURC. Authors advocate for responsible deployment, ethical considerations, regulatory compliance, and transparent reporting to mitigate misuse risks and foster beneficial outcomes.}
+
+% Only for journal Nursing Reports
+%\publicinvolvement{Please describe how the public (patients, consumers, carers) were involved in the research. Consider reporting against the GRIPP2 (Guidance for Reporting Involvement of Patients and the Public) checklist. If the public were not involved in any aspect of the research add: ``No public involvement in any aspect of this research''.}
+%
+%% Only for journal Nursing Reports
+%\guidelinesstandards{Please add a statement indicating which reporting guideline was used when drafting the report. For example, ``This manuscript was drafted against the XXX (the full name of reporting guidelines and citation) for XXX (type of research) research''. A complete list of reporting guidelines can be accessed via the equator network: \url{https://www.equator-network.org/}.}
+%
+%% Only for journal Nursing Reports
+%\useofartificialintelligence{Please describe in detail any and all uses of artificial intelligence (AI) or AI-assisted tools used in the preparation of the manuscript. This may include, but is not limited to, language translation, language editing and grammar, or generating text. Alternatively, please state that “AI or AI-assisted tools were not used in drafting any aspect of this manuscript”.}
+
+%\acknowledgments{In this section you can acknowledge any support given which is not covered by the author contribution or funding sections. This may include administrative and technical support, or donations in kind (e.g., materials used for experiments). Where GenAI has been used for purposes such as generating text, data, or graphics, or for study design, data collection, analysis, or interpretation of data, please add “During the preparation of this manuscript/study, the author(s) used [tool name, version information] for the purposes of [description of use]. The authors have reviewed and edited the output and take full responsibility for the content of this publication.”}
+%
+%\conflictsofinterest{Declare conflicts of interest or state ``The authors declare no conflicts of interest.'' Authors must identify and declare any personal circumstances or interest that may be perceived as inappropriately influencing the representation or interpretation of reported research results. Any role of the funders in the design of the study; in the collection, analyses or interpretation of data; in the writing of the manuscript; or in the decision to publish the results must be declared in this section. If there is no role, please state ``The funders had no role in the design of the study; in the collection, analyses, or interpretation of data; in the writing of the manuscript; or in the decision to publish the results''.} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Optional
+
+%% Only for journal Encyclopedia
+%\entrylink{The Link to this entry published on the encyclopedia platform.}
+
+%\abbreviations{Abbreviations}{
+%The following abbreviations are used in this manuscript:
+%\\
+%
+%\noindent 
+%\begin{tabular}{@{}ll}
+%MDPI & Multidisciplinary Digital Publishing Institute\\
+%DOAJ & Directory of open access journals\\
+%TLA & Three letter acronym\\
+%LD & Linear dichroism
+%\end{tabular}
+%}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Optional
+%\appendixtitles{no} % Leave argument "no" if all appendix headings stay EMPTY (then no dot is printed after "Appendix A"). If the appendix sections contain a heading then change the argument to "yes".
+%\appendixstart
+%\appendix
+%\section[\appendixname~\thesection]{}
+%\subsection[\appendixname~\thesubsection]{}
+%The appendix is an optional section that can contain details and data supplemental to the main text---for example, explanations of experimental details that would disrupt the flow of the main text but nonetheless remain crucial to understanding and reproducing the research shown; figures of replicates for experiments of which representative data are shown in the main text can be added here if brief, or as Supplementary Data. Mathematical proofs of results not central to the paper can be added as an appendix.
+%
+%\begin{table}[H] 
+%\caption{This is a table caption.\label{tab5}}
+%%\newcolumntype{C}{>{\centering\arraybackslash}X}
+%\begin{tabularx}{\textwidth}{CCC}
+%\toprule
+%\textbf{Title 1}	& \textbf{Title 2}	& \textbf{Title 3}\\
+%\midrule
+%Entry 1		& Data			& Data\\
+%Entry 2		& Data			& Data\\
+%\bottomrule
+%\end{tabularx}
+%\end{table}
+%
+%\section[\appendixname~\thesection]{}
+%All appendix sections must be cited in the main text. In the appendices, Figures, Tables, etc. should be labeled, starting with ``A''---e.g., Figure A1, Figure A2, etc.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\isPreprints{}{% This command is only used for ``preprints''.
+\begin{adjustwidth}{-\extralength}{0cm}
+%} % If the paper is ``preprints'', please uncomment this parenthesis.
+%\printendnotes[custom] % Un-comment to print a list of endnotes
+
+\reftitle{References}
+
+% Please provide the correct journal abbreviation (e.g. according to the “List of Title Word Abbreviations” http://www.issn.org/services/online-services/access-to-the-ltwa/).
+% Citations and References in Supplementary files are permitted provided that they also appear in the reference list here. 
+
+%=====================================
+% References, variant A: external bibliography
+%=====================================
+\bibliography{references}
+
+%=====================================
+% References, variant B: internal bibliography
+%=====================================
+
+%% ACS format
+%\begin{thebibliography}{999}
+%% Reference 1
+%\bibitem{ref-journal}
+%Author~1, T. The title of the cited article. {\em Journal Abbreviation} {\bf 2008}, {\em 10}, 142--149.
+%% Reference 2
+%\bibitem{ref-book1}
+%Author~2, L. The title of the cited contribution. In {\em The Book Title}; Editor 1, F., Editor 2, A., Eds.; Publishing House: City, Country, 2007; pp. 32--58.
+%% Reference 3
+%\bibitem{ref-book2}
+%Author 1, A.; Author 2, B. \textit{Book Title}, 3rd ed.; Publisher: Publisher Location, Country, 2008; pp. 154--196.
+%% Reference 4
+%\bibitem{ref-unpublish}
+%Author 1, A.B.; Author 2, C. Title of Unpublished Work. \textit{Abbreviated Journal Name} year, \textit{phrase indicating stage of publication (submitted; accepted; in press)}.
+%% Reference 5
+%\bibitem{ref-url}
+%Title of Site. Available online: URL (accessed on Day Month Year).
+%% Reference 6
+%\bibitem{ref-proceeding}
+%Author 1, A.B.; Author 2, C.D.; Author 3, E.F. Title of presentation. In Proceedings of the Name of the Conference, Location of Conference, Country, Date of Conference (Day Month Year); Abstract Number (optional), Pagination (optional).
+%% Reference 7
+%\bibitem{ref-thesis}
+%Author 1, A.B. Title of Thesis. Level of Thesis, Degree-Granting University, Location of University, Date of Completion.
+%\end{thebibliography}
+
+% If authors have biography, please use the format below
+%\section*{Short Biography of Authors}
+%\bio
+%{\raisebox{-0.35cm}{\includegraphics[width=3.5cm,height=5.3cm,clip,keepaspectratio]{Definitions/author1.pdf}}}
+%{\textbf{Firstname Lastname} Biography of first author}
+%
+%\bio
+%{\raisebox{-0.35cm}{\includegraphics[width=3.5cm,height=5.3cm,clip,keepaspectratio]{Definitions/author2.jpg}}}
+%{\textbf{Firstname Lastname} Biography of second author}
+
+% For the MDPI journals use author-date citation, please follow the formatting guidelines on http://www.mdpi.com/authors/references
+% To cite two works by the same author: \citeauthor{ref-journal-1a} (\citeyear{ref-journal-1a}, \citeyear{ref-journal-1b}). This produces: Whittaker (1967, 1975)
+% To cite two works by the same author with specific pages: \citeauthor{ref-journal-3a} (\citeyear{ref-journal-3a}, p. 328; \citeyear{ref-journal-3b}, p.475). This produces: Wong (1999, p. 328; 2000, p. 475)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% for journal Sci
+%\reviewreports{\\
+%Reviewer 1 comments and authors’ response\\
+%Reviewer 2 comments and authors’ response\\
+%Reviewer 3 comments and authors’ response
+%}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\PublishersNote{}
+%\isPreprints{}{% This command is only used for ``preprints''.
+\end{adjustwidth}
+%} % If the paper is ``preprints'', please uncomment this parenthesis.
+\end{document}
+

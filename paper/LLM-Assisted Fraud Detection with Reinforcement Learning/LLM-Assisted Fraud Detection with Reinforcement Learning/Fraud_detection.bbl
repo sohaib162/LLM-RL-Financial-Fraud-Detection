@@ -1,0 +1,239 @@
+\begin{thebibliography}{999}
+
+\bibitem[Elkan(2001)]{Elkan2001cost}
+Elkan, C.
+\newblock The foundations of cost-sensitive learning.
+\newblock In Proceedings of the Proc. IJCAI,  2001.
+
+\bibitem[Lin et~al.(2017)Lin, Goyal, Girshick, He, and
+  Doll{\'a}r]{Lin2017focalloss}
+Lin, T.Y.; Goyal, P.; Girshick, R.; He, K.; Doll{\'a}r, P.
+\newblock Focal loss for dense object detection.
+\newblock In Proceedings of the Proc. ICCV,  2017.
+\newblock {\url{https://doi.org/10.1109/ICCV.2017.324}}.
+
+\bibitem[Benchaji et~al.(2021)Benchaji, Douzi, Ouahidi, and
+  Jaafari]{Benchaji2021}
+Benchaji, I.; Douzi, S.; Ouahidi, B.E.; Jaafari, J.
+\newblock Enhanced credit card fraud detection based on attention mechanism and
+  {LSTM} deep model.
+\newblock {\em J. Big Data} {\bf 2021}, {\em 8}.
+\newblock {\url{https://doi.org/10.1186/s40537-021-00541-8}}.
+
+\bibitem[Esenogho et~al.(2022)Esenogho, Mienye, Swart, Aruleba, and
+  Obaido]{Esenogho2022}
+Esenogho, E.; Mienye, I.D.; Swart, T.G.; Aruleba, K.; Obaido, G.
+\newblock A Neural Network Ensemble With Feature Engineering for Improved
+  Credit Card Fraud Detection.
+\newblock {\em IEEE Access} {\bf 2022}, {\em 10}.
+\newblock {\url{https://doi.org/10.1109/ACCESS.2022.3150891}}.
+
+\bibitem[Randhawa et~al.(2018)Randhawa, Loo, Seera, Lim, and
+  Nandi]{Randhawa2018}
+Randhawa, K.; Loo, C.K.; Seera, M.; Lim, C.P.; Nandi, A.K.
+\newblock Credit card fraud detection using {AdaBoost} and majority voting.
+\newblock {\em IEEE Access} {\bf 2018}, {\em 6}.
+\newblock {\url{https://doi.org/10.1109/ACCESS.2018.2806420}}.
+
+\bibitem[Tanouz et~al.(2021)Tanouz, Subramanian, Eswar, et~al.]{Tanouz2021}
+Tanouz, D.; Subramanian, R.R.; Eswar, D.;  et~al.
+\newblock Credit card fraud detection using machine learning.
+\newblock In Proceedings of the Proc. Int. Conf. Comput. Intell. Commun.
+  Technol.,  2021.
+\newblock {\url{https://doi.org/10.1109/CICT53865.2021.9432308}}.
+
+\bibitem[Alfaiz and Fati(2022)]{Alfaiz2022}
+Alfaiz, N.S.; Fati, S.M.
+\newblock Enhanced credit card fraud detection model using machine learning.
+\newblock {\em Electronics} {\bf 2022}, {\em 11}.
+\newblock {\url{https://doi.org/10.3390/electronics11040662}}.
+
+\bibitem[Khalid et~al.(2024)Khalid, Gul, Nasir, Al-Issa, and
+  Al-Maroof]{Khalid2024}
+Khalid, A.R.; Gul, H.; Nasir, J.; Al-Issa, Y.I.; Al-Maroof, R.S.
+\newblock Enhancing credit card fraud detection: an ensemble machine learning
+  approach.
+\newblock {\em Big Data and Cognitive Computing} {\bf 2024}, {\em 8},~6.
+\newblock {\url{https://doi.org/10.3390/bdcc8010006}}.
+
+\bibitem[Zhou et~al.(2022)]{Zhou2022}
+Zhou, X.;  et~al.
+\newblock Fraud detection in mobile payment systems using {XGBoost}-based
+  frameworks.
+\newblock {\em Inf. Syst. Front.} {\bf 2022}.
+\newblock {\url{https://doi.org/10.1007/s10796-022-10346-6}}.
+
+\bibitem[Lopez-Rojas et~al.(2016)Lopez-Rojas, Elmir, and Axelsson]{Lopez2016}
+Lopez-Rojas, E.A.; Elmir, A.; Axelsson, S.
+\newblock {PaySim}: A financial mobile money simulator for fraud detection.
+\newblock In Proceedings of the Proc. European Modeling and Simulation
+  Symposium,  2016.
+
+\bibitem[Dang et~al.(2021)Dang, Van, Nguyen, and Nguyen]{Dang2021}
+Dang, T.K.; Van, B.A.; Nguyen, Q.H.; Nguyen, H.T.
+\newblock Machine learning based on resampling approaches and deep
+  reinforcement learning for credit card fraud detection systems.
+\newblock {\em Applied Sciences} {\bf 2021}, {\em 11},~10004.
+\newblock {\url{https://doi.org/10.3390/app112110004}}.
+
+\bibitem[Zhinin-Vera et~al.(2020)Zhinin-Vera, Riofrio-Paz, Camacho-G.,
+  Brito-P., Chang, Valencia-Ramos, Velastegui, Pilliza, and
+  Quinga-Socasi]{Singh2021}
+Zhinin-Vera, L.; Riofrio-Paz, F.; Camacho-G., E.; Brito-P., L.; Chang, O.;
+  Valencia-Ramos, R.; Velastegui, R.; Pilliza, G.E.; Quinga-Socasi, F.
+\newblock {Q-Credit Card Fraud Detector for Imbalanced Classification using
+  Reinforcement Learning}.
+\newblock In Proceedings of the Proceedings of the 12th International
+  Conference on Agents and Artificial Intelligence - Volume 1: ICAART.
+  SciTePress,  2020, pp. 279--286.
+\newblock {\url{https://doi.org/10.5220/0009156102790286}}.
+
+\bibitem[Kumari and Acharjya(2024)]{Mehmood2021}
+Kumari, N.; Acharjya, D.P.
+\newblock Deep reinforcement learning for credit card fraud detection.
+\newblock In Proceedings of the International Conference on Advances in
+  Data-driven Computing and Intelligent Systems. Springer Nature Singapore,
+  2024, pp. 567--577.
+\newblock {\url{https://doi.org/10.1007/978-981-99-3179-8_55}}.
+
+\bibitem[Araci(2019)]{aracifinbert2019}
+Araci, D.
+\newblock FinBERT: Financial Sentiment Analysis with Pre-trained Language
+  Models,  2019,  \href{http://arxiv.org/abs/1908.10063}{{\normalfont
+  [arXiv:cs.CL/1908.10063]}}.
+
+\bibitem[Yang et~al.(2023)Yang, Xu, Liu, Xu, and Li]{Yang2023}
+Yang, X.; Xu, J.; Liu, S.; Xu, B.; Li, Y.
+\newblock {FinChain-BERT}: A high-accuracy automatic fraud detection model
+  based on {NLP} methods for financial scenarios.
+\newblock {\em Information} {\bf 2023}, {\em 14},~499.
+\newblock {\url{https://doi.org/10.3390/info14090499}}.
+
+\bibitem[Bhattacharya and Mickovic(2024)]{Bhattacharya2022}
+Bhattacharya, I.; Mickovic, A.
+\newblock Accounting fraud detection using contextual language learning.
+\newblock {\em International Journal of Accounting Information Systems} {\bf
+  2024}, {\em 53},~100682.
+\newblock {\url{https://doi.org/10.1016/j.accinf.2024.100682}}.
+
+\bibitem[Lee et~al.(2025)Lee, Stevens, and Han]{Lee2023}
+Lee, J.; Stevens, N.; Han, S.C.
+\newblock Large language models in finance (finllms).
+\newblock {\em Neural Computing and Applications} {\bf 2025}, pp. 1--15.
+\newblock {\url{https://doi.org/10.1007/s00521-024-10495-6}}.
+
+\bibitem[Kirkos et~al.(2024)Kirkos, Siakoulis, Koursiounis, Lixourgiotis,
+  Charalampidou, Drosatos, and Spathis]{Chen2023}
+Kirkos, E.; Siakoulis, V.; Koursiounis, G.; Lixourgiotis, P.; Charalampidou,
+  S.; Drosatos, G.; Spathis, C.
+\newblock Exploring the boundaries of financial statement fraud detection with
+  large language models.
+\newblock Available at SSRN 4842962,  2024.
+
+\bibitem[Ouyang et~al.(2022)Ouyang, Wu, Jiang, Almeida, Wainwright, Mishkin,
+  Zhang, Agarwal, Slama, Ray, Schulman, Hilton, Kelton, Miller, Simens, Askell,
+  Welinder, Christiano, Leike, and Lowe]{Ouyang2022}
+Ouyang, L.; Wu, J.; Jiang, X.; Almeida, D.; Wainwright, C.L.; Mishkin, P.;
+  Zhang, C.; Agarwal, S.; Slama, K.; Ray, A.;  et~al.
+\newblock Training language models to follow instructions with human feedback.
+\newblock {\em Adv. Neural Inf. Process. Syst.} {\bf 2022}, {\em 35}.
+
+\bibitem[Ahn et~al.(2022)Ahn, Brohan, Brown, Chebotar, Cortes, David, Finn, Fu,
+  Gopalakrishnan, Hausman, et~al.]{Ahn2022}
+Ahn, M.; Brohan, A.; Brown, N.; Chebotar, Y.; Cortes, O.; David, B.; Finn, C.;
+  Fu, C.; Gopalakrishnan, K.; Hausman, K.;  et~al.
+\newblock Do as {I} can, not as {I} say: grounding language in robotic
+  affordances,  2022,  \href{http://arxiv.org/abs/2204.01691}{{\normalfont
+  [arXiv:cs.RO/2204.01691]}}.
+
+\bibitem[Aminian et~al.(2025)Aminian, Zand, and Fathabadi]{Zhao2023}
+Aminian, G.; Zand, A.; Fathabadi, H.S.
+\newblock {FraudTransformer}: Time-Aware {GPT} for Transaction Fraud Detection,
+   2025,  \href{http://arxiv.org/abs/2509.23712}{{\normalfont
+  [arXiv:cs.LG/2509.23712]}}.
+
+\bibitem[Yang et~al.(2016)Yang, Yang, Dyer, He, Smola, and
+  Hovy]{Yang2016hierarchical}
+Yang, Z.; Yang, D.; Dyer, C.; He, X.; Smola, A.; Hovy, E.
+\newblock Hierarchical attention networks for document classification.
+\newblock In Proceedings of the Proc. NAACL-HLT,  2016.
+\newblock {\url{https://doi.org/10.18653/v1/N16-1174}}.
+
+\bibitem[Bahdanau et~al.(2015)Bahdanau, Cho, and Bengio]{Bahdanau2015attention}
+Bahdanau, D.; Cho, K.; Bengio, Y.
+\newblock Neural machine translation by jointly learning to align and
+  translate.
+\newblock In Proceedings of the Proc. ICLR,  2015.
+
+\bibitem[Lin et~al.(2017)Lin, Feng, Santos, Yu, Xiang, Zhou, and
+  Bengio]{Lin2017structured}
+Lin, Z.; Feng, M.; Santos, C.N.; Yu, M.; Xiang, B.; Zhou, B.; Bengio, Y.
+\newblock A structured self-attentive sentence embedding.
+\newblock In Proceedings of the Proc. ICLR,  2017.
+
+\bibitem[Mnih et~al.(2015)Mnih, Kavukcuoglu, Silver, Rusu, Veness, Bellemare,
+  Graves, Riedmiller, Fidjeland, Ostrovski, et~al.]{Mnih2015dqn}
+Mnih, V.; Kavukcuoglu, K.; Silver, D.; Rusu, A.A.; Veness, J.; Bellemare, M.G.;
+  Graves, A.; Riedmiller, M.; Fidjeland, A.K.; Ostrovski, G.;  et~al.
+\newblock Human-level control through deep reinforcement learning.
+\newblock {\em Nature} {\bf 2015}, {\em 518}.
+\newblock {\url{https://doi.org/10.1038/nature14236}}.
+
+\bibitem[Schulman et~al.(2017)Schulman, Wolski, Dhariwal, Radford, and
+  Klimov]{Schulman2017ppo}
+Schulman, J.; Wolski, F.; Dhariwal, P.; Radford, A.; Klimov, O.
+\newblock Proximal Policy Optimization Algorithms,  2017,
+  \href{http://arxiv.org/abs/1707.06347}{{\normalfont
+  [arXiv:cs.LG/1707.06347]}}.
+
+\bibitem[Mnih et~al.(2016)Mnih, Badia, Mirza, Graves, Harley, Lillicrap,
+  Silver, and Kavukcuoglu]{Mnih2016a2c}
+Mnih, V.; Badia, A.P.; Mirza, M.; Graves, A.; Harley, T.; Lillicrap, T.P.;
+  Silver, D.; Kavukcuoglu, K.
+\newblock Asynchronous methods for deep reinforcement learning.
+\newblock In Proceedings of the Proc. ICML,  2016.
+
+\bibitem[Li et~al.(2010)Li, Chu, Langford, and Schapire]{Li2010contextual}
+Li, L.; Chu, W.; Langford, J.; Schapire, R.E.
+\newblock A contextual-bandit approach to personalized news article
+  recommendation.
+\newblock In Proceedings of the Proc. WWW,  2010.
+\newblock {\url{https://doi.org/10.1145/1772690.1772758}}.
+
+\bibitem[Brockman et~al.(2016)Brockman, Cheung, Pettersson, Schneider,
+  Schulman, Tang, and Zaremba]{Brockman2016gym}
+Brockman, G.; Cheung, V.; Pettersson, L.; Schneider, J.; Schulman, J.; Tang,
+  J.; Zaremba, W.
+\newblock OpenAI Gym,  2016,
+  \href{http://arxiv.org/abs/1606.01540}{{\normalfont
+  [arXiv:cs.LG/1606.01540]}}.
+
+\bibitem[Raffin et~al.(2021)Raffin, Hill, Gleave, Kanervisto, Ernestus, and
+  Dormann]{Raffin2021sb3}
+Raffin, A.; Hill, A.; Gleave, A.; Kanervisto, A.; Ernestus, M.; Dormann, N.
+\newblock Stable-Baselines3: Reliable reinforcement learning implementations.
+\newblock {\em J. Mach. Learn. Res.} {\bf 2021}, {\em 22}.
+
+\bibitem[Hajek and Henriques(2017)]{Hajek2017}
+Hajek, P.; Henriques, R.
+\newblock Mining corporate annual reports for intelligent detection of
+  financial statement fraud: A comparative study of machine learning methods.
+\newblock {\em Knowl.-Based Syst.} {\bf 2017}, {\em 128}.
+\newblock {\url{https://doi.org/10.1016/j.knosys.2017.05.001}}.
+
+\bibitem[Craja et~al.(2020)Craja, Kim, and Lessmann]{Craja2020}
+Craja, P.; Kim, A.; Lessmann, S.
+\newblock Deep learning for detecting financial statement fraud.
+\newblock {\em Decis. Support Syst.} {\bf 2020}, {\em 139}.
+\newblock {\url{https://doi.org/10.1016/j.dss.2020.113421}}.
+
+\bibitem[Qayoom et~al.(2024)Qayoom, Khuhro, Kumar, Waqas, Saeed, Rehman, Wu,
+  and Wang]{Qayoom2024}
+Qayoom, A.; Khuhro, M.A.; Kumar, K.; Waqas, M.; Saeed, U.; Rehman, S.U.; Wu,
+  Y.; Wang, S.
+\newblock A novel approach for credit card fraud transaction detection using
+  deep reinforcement learning scheme.
+\newblock {\em PeerJ Comput. Sci.} {\bf 2024}, {\em 10}.
+\newblock {\url{https://doi.org/10.7717/peerj-cs.1998}}.
+
+\end{thebibliography}

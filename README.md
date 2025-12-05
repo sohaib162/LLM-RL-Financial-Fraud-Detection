@@ -1,172 +1,188 @@
-# RL for Transaction Fraud Detection (PaySim & Credit Card)
+# LLM-RL Financial Fraud Detection
 
-> Reproducible notebooks for reinforcement learning (A2C/DQN/PPO) applied to transaction fraud detection, with classic ML/NLP baselines and portable data loaders.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+
+A Multi-Agent Reinforcement Learning (MARL) system for financial fraud detection that leverages Large Language Model (LLM) embeddings and state-of-the-art RL algorithms.
 
 ## Overview
-This repository collects our Final Year Project (FYP) experiments on **reinforcement learning (RL)** for transaction fraud detection. We provide notebooks that:
-- Build **custom Gymnasium environments** over transaction **embeddings** (e.g., 768‑dim sentence-transformers).
-- Train **A2C, DQN, and PPO** (Stable-Baselines3) to learn fraud‑aware policies and evaluation strategies.
-- Include **supervised baselines** (e.g., DistilBERT/embeddings + classifier) for comparison.
-- Target two public datasets: **PaySim** and **Credit Card Fraud (Kaggle/MLG‑ULB)**.
 
-The goal is to make experiments **reproducible** on a standard Ubuntu laptop (CPU or single NVIDIA GPU), avoiding Colab/Kaggle‑specific paths. A short report summarizing the approach and findings can be added to `docs/` when available.
+This project implements a novel approach to financial fraud detection by combining:
+- **LLM Embeddings**: DistilBERT-generated transaction embeddings
+- **Reinforcement Learning**: DQN and A2C agents for fraud classification
+- **Data Augmentation**: CTGAN for synthetic fraud sample generation
+- **Dimensionality Reduction**: PCA for efficient training
 
-## Highlights
-- **Custom RL environment** wrapping transaction embeddings (default 768‑d) with shaped rewards.
-- **Stable-Baselines3** pipelines for A2C, DQN, PPO, with VecEnv/VecNormalize options.
-- **Portable data loaders** powered by `kagglehub` with local fallbacks—no absolute `/content` or `/kaggle/input` paths.
-- **Supervised baselines** (DistilBERT embeddings + classifier) to contextualize RL performance.
-- Clear **repro steps** and pinned **requirements**.
+## Key Features
+
+- **Hybrid LLM-RL Architecture**: Uses attention-pooled embeddings from DistilBERT as state representations
+- **Multi-Algorithm Support**: Implements both DQN (Deep Q-Network) and A2C (Advantage Actor-Critic)
+- **Class Imbalance Handling**: CTGAN-based synthetic fraud generation
+- **Comprehensive Evaluation**: Confusion matrices, precision, recall, F1-score metrics
+- **TensorBoard Integration**: Real-time training and evaluation visualization
+
+## Performance
+
+### DQN Agent
+- **Accuracy**: 91.03%
+- **Precision**: 66.42%
+- **Recall**: 92.86%
+- **F1-Score**: 77.45%
+
+### A2C Agent
+- **Accuracy: 99.%**
+- **Precision: 100%**
+- **Recall: 99.7%**
+- **F1-Score: 99.9%**
 
 ## Project Structure
+
 ```
-.
-├─ data/                          # Auto-downloaded or manual CSVs (git-ignored)
-├─ notebooks/
-│  ├─ paysim/
-│  │  ├─ RL_PAYSIM.ipynb
-│  │  └─ paysim_processing.ipynb  # (renamed from paysim_processingipynb)
-│  ├─ credit_card/
-│  │  ├─ RL2.0.ipynb
-│  │  └─ distilbert_baseline.ipynb
-│  └─ fillings/
-│     └─ RL_FILLINGS.ipynb        # expects Final_Dataset.csv
-├─ requirements.txt
-└─ README.md
-```
+LLM-RL-Financial-Fraud-Detection/
+├── notebooks/              # Jupyter notebooks for experiments
+│   ├── RL2.0_ATT.ipynb    # Main RL training with attention embeddings
+│   ├── RL2.0_ATT_Hybrid.ipynb
+│   ├── RL2.0.ipynb
+│   └── fraud-detection-with-distilbert.ipynb
+├── src/                    # Source code
+│   └── custom_env.py      # Custom Gymnasium environment
+├── data/                   # Data files
+│   └── embeddings/        # Pre-generated embeddings
+│       ├── embeddings.pkl
+│       └── attention_pooled_embeddings.pkl
+├── results/               # Training results
+│   ├── figures/          # Generated plots and visualizations
+│   ├── checkpoints/      # Model checkpoints
+│   └── tensorboard/      # TensorBoard logs
+├── models/               # Saved trained models
+│   ├── dqn_fraud_model.zip
+│   └── a2c_fraud_model.zip
+├── .models/              # Alternative model storage
+├── ablation_study/       # Ablation study experiments
+├── paper/                # Research paper and documentation
+└── docs/                 # Additional documentation
 
-If you start from an existing tree, rename:
-- `cards fraud_detection/` → `notebooks/credit_card/`
-- `paysim/paysim_processingipynb` → `notebooks/paysim/paysim_processing.ipynb`
-- `fraud-detection-with-distilber_finalt.ipynb` → `distilbert_baseline.ipynb`
+``````
 
-## Datasets
-- **PaySim** (Kaggle): `ealaxi/paysim1` → file: `PS_20174392719_1491204439457_log.csv`
-- **Credit Card Fraud** (Kaggle/MLG‑ULB): `mlg-ulb/creditcardfraud` → file: `creditcard.csv`
-- **Fillings** notebook expects `Final_Dataset.csv` (place in `data/` or adapt loader).
+## Usage
 
-### Portable data loading (drop-in cells)
-**Credit Card Fraud**
-```python
-import os, pandas as pd
-try:
-    import kagglehub
-    path = kagglehub.dataset_download("mlg-ulb/creditcardfraud")
-    df = pd.read_csv(os.path.join(path, "creditcard.csv"))
-except Exception:
-    df = pd.read_csv("data/creditcard.csv")  # manual fallback
-```
+### Training
 
-**PaySim**
-```python
-import os, pandas as pd
-try:
-    import kagglehub
-    path = kagglehub.dataset_download("ealaxi/paysim1")
-    df = pd.read_csv(os.path.join(path, "PS_20174392719_1491204439457_log.csv"))
-except Exception:
-    df = pd.read_csv("data/PS_20174392719_1491204439457_log.csv")
-```
+#### Train DQN Agent
+Open [notebooks/RL2.0_ATT.ipynb](notebooks/RL2.0_ATT.ipynb) and run all cells. The notebook includes:
+- Data loading and preprocessing
+- PCA dimensionality reduction (768D → 73D)
+- CTGAN data augmentation
+- DQN training with custom reward configuration
+- Model evaluation and metrics
 
-## Setup
-Python ≥ 3.10 is recommended.
+#### Train A2C Agent
+The same notebook includes A2C training. Both agents are trained on the same dataset for comparison.
 
+### Evaluation
+
+Models are evaluated on a held-out test set with:
+- Confusion matrices
+- Classification reports (precision, recall, F1-score)
+- TensorBoard visualizations (Q-values, value functions, policy entropy)
+
+### Custom Environment
+
+The project includes a custom Gymnasium environment ([src/custom_env.py](src/custom_env.py)) with:
+- **State**: Transaction embeddings (PCA-reduced to 73D)
+- **Action Space**: Binary (0: Not Fraud, 1: Fraud)
+- **Reward Configuration**:
+  - True Positive (TP): +10.0
+  - False Positive (FP): -5.0
+  - False Negative (FN): -20.0
+  - True Negative (TN): +1.0
+
+## Methodology
+
+### 1. Embedding Generation
+- DistilBERT generates 768-dimensional embeddings for transactions
+- Attention-pooled embeddings capture contextual information
+
+### 2. Dimensionality Reduction
+- PCA reduces embeddings from 768D to 73D
+- Retains 99% of variance
+- Improves training efficiency
+
+### 3. Data Augmentation
+- CTGAN generates synthetic fraud samples
+- Balances class distribution (16.7% → 28.6% fraud ratio)
+- Improves minority class performance
+
+### 4. RL Training
+- Custom reward function penalizes false negatives heavily
+- DQN uses experience replay and target networks
+- A2C uses advantage estimation and policy gradients
+
+## Visualization
+
+Launch TensorBoard to visualize training:
 ```bash
-# Clone
-git clone https://github.com/<you>/rl-transaction-fraud.git
-cd rl-transaction-fraud
-
-# Create env (conda example)
-conda create -n rl-fraud python=3.10 -y
-conda activate rl-fraud
-
-# Install deps
-python -m pip install -r requirements.txt
+tensorboard --logdir=results/tensorboard/
 ```
 
-### requirements.txt
-We pin core tools for Gymnasium + SB3 and standard ML / NLP stacks.
+Metrics include:
+- Training loss and rewards
+- Q-values and value function estimates
+- Policy entropy
+- Confusion matrices
+- Action probabilities
+
+## Ablation Study
+
+The [ablation_study/](ablation_study/) directory contains experiments analyzing:
+- Impact of PCA dimensionality reduction
+- Effect of CTGAN augmentation
+- Reward function configurations
+- Different RL algorithms
+
+## Research Paper
+
+See [paper/](paper/) directory for:
+- Full research paper (PDF)
+- LaTeX source files
+- Figures and plots
+- References and bibliography
+
+## Citation
+
+If you use this code in your research, please cite:
+
+```bibtex
+still in pub phase 
 ```
-# RL
-stable-baselines3==2.3.2
-gymnasium==0.29.1
 
-# Core scientific
-numpy>=1.26
-pandas>=2.2
-scikit-learn>=1.4
-matplotlib>=3.8
-seaborn>=0.13
+## Requirements
 
-# NLP / embeddings
-transformers>=4.42
-sentence-transformers>=3.0
-datasets>=2.20
-torch>=2.3
-
-# Data helpers
-kagglehub>=0.2.5
-
-# Optional
-ctgan>=0.7
-plotly>=5.22
-```
-
-## Quickstart
-1. Open the notebook you want (e.g., `notebooks/paysim/RL_PAYSIM.ipynb`).  
-2. Run the **dataset loader** cell (above) to fetch or read the CSV.  
-3. Ensure your environment imports **Gymnasium** (not legacy `gym`):
-   ```python
-   import gymnasium as gym
-   from gymnasium import spaces
-   ```
-4. Train an RL agent (A2C/DQN/PPO) and monitor training logs/plots.  
-5. Save artifacts to `artifacts/`:
-   ```python
-   model.save("artifacts/a2c_paysim.zip")
-   ```
-
-## Custom RL Environment
-The RL notebooks define a `FraudDetectionEnv(gym.Env)` variant operating on **embedding vectors** (default 768‑dim). If you abstract it into a module, place code in `envs/fraud_env.py` and import it in notebooks. Validate the observed feature dimension and surface helpful errors (e.g., `print(obs.shape)` when mismatched).
-
-## Baselines
-- **DistilBERT embeddings + classic classifier** notebook lives under `notebooks/credit_card/distilbert_baseline.ipynb`.
-- Consider reporting precision/recall, ROC‑AUC, PR‑AUC, and calibration, alongside RL metrics.
-
-## Reproducibility
-- Clear heavy notebook outputs before committing:
-  ```bash
-  find notebooks -name "*.ipynb" -print0 | xargs -0 -I{}     jupyter nbconvert --ClearOutputPreprocessor.enabled=True --inplace {}
-  ```
-- Fix random seeds where possible (NumPy, PyTorch, SB3).  
-- Prefer **VecNormalize** and document `n_envs` if using parallel envs.
-
-## Results
-**Validation/Test Metrics**  
-![Validation/Test Metrics Table](docs/figures/metrics-table.png)
-
-**DQN – Confusion Matrix (Test)**  
-![Confusion Matrix – DQN](docs/figures/confusion-matrix-dqn.png)
-
-**A2C – Policy Loss During Training**  
-![Policy Loss – A2C](docs/figures/policy-loss-a2c.png)
+See [requirements.txt](requirements.txt) for full dependency list. Key libraries:
+- PyTorch 2.0+
+- Stable-Baselines3 2.0+
+- Gymnasium 0.28+
+- Transformers 4.30+
+- CTGAN 0.11+
+- scikit-learn 1.3+
 
 
-**A2C – Confusion Matrix (Test)**  
-![Confusion Matrix – A2C](docs/figures/confusion-matrix-a2c.png)
 
-> **Notes**
-> - For imbalanced datasets, report **PR-AUC**, **Recall@k**, **F1 (macro)**, and **cost-weighted** metrics in addition to accuracy.
-> - Consider threshold tuning and business costs for false positives/negatives.
-> - Log seeds and data splits for reproducibility.
+## License
 
-## Roadmap
-- Package `FraudDetectionEnv` as a pip‑installable module.
-- Add hyperparameter sweeps (Optuna) and PR‑AUC optimization.
-- Explore reward shaping & cost‑aware policies (class imbalance).
-- Add CI pre‑commit hooks for lint & notebook output clearing.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
+## Acknowledgments
 
-## Acknowledgements
-- PaySim and MLG‑ULB Credit Card Fraud datasets (Kaggle).
-- Stable‑Baselines3, Gymnasium, Hugging Face Transformers/Sentence‑Transformers.
+- DistilBERT by Hugging Face
+- Stable-Baselines3 for RL implementations
+- CTGAN for data augmentation
+- OpenAI Gymnasium for environment framework
+
+## Contact
+
+For questions or collaborations, please open an issue on GitHub.
+
+---
+
+**Note**: Large files (datasets, model checkpoints, embeddings) are excluded from the repository via `.gitignore`. You'll need to generate embeddings using the provided notebooks or download them separately.
